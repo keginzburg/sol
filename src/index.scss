@@ -1,0 +1,70 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 8px #13e24f;
+  color: rgba(19, 226, 79, 255);
+  background-color: rgba(20, 29, 33, 255);
+}
+
+.main_content {
+  display: flex;
+  justify-content: start;
+}
+
+.orbit_sim {
+  width: 520px;
+  height: 620px;
+  margin-right: 5px;
+  border: 2px solid rgba(19, 226, 79, 255);
+  box-shadow: 0 0 5px #13e24f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+.orbit_header {
+  display: inline - block;
+  width: 500px;
+  margin-left: 10px;
+  border: 2px solid rgba(19, 226, 79, 255);
+  box-shadow: 0 0 5px #13e24f;
+}
+
+h2 {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+h3 {
+  font-size: 8px;
+  padding-left: 10px;
+}
+
+.orbit_canvas {
+  border: 2px solid rgba(19, 226, 79, 255);
+  box-shadow: 0 0 5px #13e24f;
+  width: 500px;
+  height: 500px;
+  margin-left: 10px;
+}
+
+.gravity_sim {
+  margin-top: 47px;
+  width: 270px;
+  height: 320px;
+  border: 2px solid rgba(19, 226, 79, 255);
+  box-shadow: 0 0 5px #13e24f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+.gravity_canvas {
+  border: 2px solid rgba(19, 226, 79, 255);
+  box-shadow: 0 0 5px #13e24f;
+  width: 250px;
+  height: 250px;
+  margin-left: 10px;
+}

@@ -162,3 +162,32 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 // moonColor = rgba(200,65,47,255)
 // planetColor = rgba(196,238,204,255)
+
+//let moonDistanceX = semiMajorAxis(data.semimajorAxis);
+//let moonDistanceY = semiMinorAxis(data.semimajorAxis, data.eccentricity);
+//let moonDistanceX = Math.random() * 100 + 120;
+
+//(27 / data.sideralOrbit) * 0.003
+
+//let eccentricity = getMoonData(moonURL);
+// eccentricity = c/a
+// c is distance from center of ellipse to focus
+// a is semimajoraxis
+// find out the x axis distance shift and add it the x coordinate
+// possibly change the velocity depending on its eccentricity? or just give it a blanket speed according to its sideral orbital data point?
+
+// moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.random() * 2, "rgba(200,65,47,255)", Math.random() * Math.PI * 2, Math.random() * 100 + 100, Math.random() * 100 + 100, Math.random()*0.003));
+
+// function semiMajorAxis(major) {
+//   while (major > 200) {
+//     major /= 10;
+//   }
+//   return major;
+// }
+// function semiMinorAxis(major, eccen) {
+//   let minor = major*(Math.sqrt(1-(eccen*eccen)));
+//   while (minor > 200) {
+//     minor /= 10;
+//   }
+//   return minor;
+// }
