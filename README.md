@@ -41,19 +41,19 @@ Technologies, Libraries, APIs:
 
 Implementation Timeline:
 
-* Friday Afternoon & Weekend: Setup project, including getting webpack up and running. Create Planet, Moon, Simulation classes. Get planet and moon canvas visualizations to show up on the screen, and spend time building structure for lunar orbits. Also begin setting up gravity and temperature canvases and respective classes.
+* Friday Afternoon & Weekend: Setup project, including getting webpack up and running. Create Planet, Moon, Simulation classes. Get planet and moon canvas visualizations to show up on the screen and build basic structure for lunar orbits. Write formula functions that adapt orbital data for canvas design. Also begin setting up gravity and temperature canvases and respective classes.
 
-* Monday: Dedicate this day toward implementing the underlying logic of Sol. Apply basic animation and ensure that I can get my Orbit canvas to dynamically render accurate, yet accessible representations of the individual planets and their lunar bodies. Ensure that my data is being fetched properly as well.
+* Monday: Dedicate this day toward implementing the underlying logic of Sol. Apply basic animation and ensure that I can get my Orbit canvas to dynamically render accurate, yet accessible representations of the individual planets and their lunar bodies. Ensure that my data is being fetched properly before creating planet links that fetch orbital, gravity, and temperature data from API. 
 
-* Tuesday: Focus on the gravity and temperature canvases. Create a basic environemnt for my gravity canvas and a FallingObject class for gravity simulation. Create a visually striking and informative temperature readout out of a canvas rendering. Ensure that my data is being fetched properly.
+* Tuesday: Focus on the gravity and temperature canvases. Create a basic environment for my gravity canvas and a FallingObject class for gravity simulation. Create a visually striking and informative temperature readout out of a canvas rendering and Temperature class. Ensure that my data is being fetched properly.
 
-* Wednesday: Finish implementing data visualization interactivity, and focus on styling, as well as implementing the different color schemes and nav links. If time, start on bonuses.
+* Wednesday: Finish implementing data visualization interactivity, and focus on styling, as well as implementing the color scheme and styled nav links. If time, start on bonuses.
 
 * Thursday Morning: Deploy to GitHub pages. If time, rewrite this proposal as a production README.
 
 
 Bonus Features:
-
+ 
 * Add music and sounds for atmosphere.
 * Add ability to pause and resume simulations.
 * Add improved data identifiers for planets and respective bodies.
