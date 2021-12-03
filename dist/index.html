@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOL</title>
   <script src="main.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-shadow: 0 0 1px #13e24f;
+      color: rgba(19, 226, 79, 255);
+      background-color: rgba(20, 29, 33, 255);
+    }
+
+    .orbit_sim {
+      width: 520px;
+      height: 620px;
+      border: 2px solid rgba(19, 226, 79, 255);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: space-around;
+    }
+
+    .orbit_header {
+      display: inline-block;
+      width: 500px;
+      margin-left: 10px;
+      border: 2px solid rgba(19, 226, 79, 255);
+    }
+
+    h2 {
+      font-size: 18px;
+      padding-left: 10px;
+    }
+
+    h3 {
+      font-size: 8px;
+    }
+
+    .orbit_canvas {
+      border: 2px solid rgba(19, 226, 79, 255);
+      box-shadow: 0 0 5px #13e24f;
+      width: 500px;
+      height: 500px;
+      margin-left: 10px;
+    }
+  </style>
 </head>
 
 <body>
   <div class="orbit_sim">
+    <div class="orbit_header">
+      <h2>LUNAR ORBITAL PATHWAYS</h2>
+      <h3 class="planet_body">PLANETARY BODY: </h3>
+      <h3>SATELLITES: </h3>
+    </div>
     <canvas class="orbit_canvas"></canvas>
   </div>
 </body>

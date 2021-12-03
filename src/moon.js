@@ -1,4 +1,4 @@
-function Moon(x, y, radius, color, radians, distanceX, distanceY, velocity) {
+function Moon(x, y, radius, radians, distanceX, distanceY, velocity) {
   this.x = x;
   this.y = y;
   this.radius = radius;

@@ -16,6 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.fillRect(0, 0, orbitCanvas.width, orbitCanvas.height);
   }
 
+  // function semiMajorAxis(major) {
+  //   while (major > 200) {
+  //     major /= 10;
+  //   }
+  //   return major;
+  // }
+  // function semiMinorAxis(major, eccen) {
+  //   let minor = major*(Math.sqrt(1-(eccen*eccen)));
+  //   while (minor > 200) {
+  //     minor /= 10;
+  //   }
+  //   return minor;
+  // }
+
+  function semiMinorAxis(major, eccen) {
+    return major * (Math.sqrt(1 - (eccen * eccen)));
+  }
+
   let planet;
   let moons;
 
@@ -30,12 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
           })
           .then(data => {
+            //let moonDistanceX = semiMajorAxis(data.semimajorAxis);
+            //let moonDistanceY = semiMinorAxis(data.semimajorAxis, data.eccentricity);
+            let moonDistanceX = Math.random()*100 + 125;
+            let moonDistanceY = semiMinorAxis(moonDistanceX, data.eccentricity);
+
             if (data.meanRadius > data.equaRadius) {
               let moonRadius = data.meanRadius;
-              moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random() * Math.PI * 2, Math.random() * 100 + 100, Math.random() * 100 + 100, (27 / data.sideralOrbit) * 0.003));
+              moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random()*Math.PI*2, (moonDistanceX), (moonDistanceY), (27 / data.sideralOrbit) * 0.003));
             } else {
               let moonRadius = data.equaRadius;
-              moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random() * Math.PI * 2, Math.random() * 100 + 100, Math.random() * 100 + 100, (27 / data.sideralOrbit) * 0.009));
+              moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random()*Math.PI*2, (moonDistanceX), (moonDistanceY), (27 / data.sideralOrbit) * 0.003));
             }
           })
 
@@ -64,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function getPlanetData(planetName) {
     fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planetName}`)
       .then(response => {
-        return response.json()
+        return response.json();
       })
       .then(data => {
         planet = new Planet(orbitCanvas.width / 2, orbitCanvas.height / 2, data.meanRadius * 0.001);
