@@ -10,26 +10,26 @@ function simulateGravity() {
   function space() {
     const spaceColor = "rgba(20,29,33,255)";
     ctx.fillStyle = spaceColor;
-    ctx.fillRect(0, 0, orbitCanvas.width, orbitCanvas.height);
+    ctx.fillRect(0, 0, gravityCanvas.width, gravityCanvas.height);
   }
 
-  function animate() {
+  function animate(object) {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, gravityCanvas.width, gravityCanvas.height);
     space();
 
-    object.updateObject();
+    object.updateObject(ctx);
   }
   
   let object;
 
   function createObject() {
     object = new FallingObject();
-    animate();
+    animate(object);
   }
 
   createObject();
 
 }
 
-simulateGravity();
+module.exports = simulateGravity;

@@ -1,6 +1,6 @@
 function FallingObject() {
   this.x = 125;
-  this.y = 0;
+  this.y = 10;
   this.radius = 10;
   this.color = "rgba(19,226,79,255)";
   this.gravity = 0.1;
