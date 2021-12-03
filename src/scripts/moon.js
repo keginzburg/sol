@@ -8,7 +8,7 @@ function Moon(x, y, radius, radians, distanceX, distanceY, velocity) {
   this.distanceY = distanceY;
   this.velocity = velocity;
 
-  this.updateMoon= (ctx2) => {
+  this.updateMoon = (ctx2) => {
     this.radians += this.velocity;
     this.x = x + Math.cos(this.radians) * this.distanceX;
     this.y = y + Math.sin(this.radians) * this.distanceY;

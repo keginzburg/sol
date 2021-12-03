@@ -1,5 +1,5 @@
-const Planet = require("./planet.js");
-const Moon = require("./moon.js");
+const Planet = require("./scripts/planet.js");
+const Moon = require("./scripts/moon.js");
 
 document.addEventListener('DOMContentLoaded', () => {
   const orbitCanvas = document.querySelector(".orbit_canvas");
@@ -50,15 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
           .then(data => {
             //let moonDistanceX = semiMajorAxis(data.semimajorAxis);
             //let moonDistanceY = semiMinorAxis(data.semimajorAxis, data.eccentricity);
-            let moonDistanceX = Math.random()*100 + 125;
+            let moonDistanceX = Math.random() * 100 + 125;
             let moonDistanceY = semiMinorAxis(moonDistanceX, data.eccentricity);
 
             if (data.meanRadius > data.equaRadius) {
               let moonRadius = data.meanRadius;
-              moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random()*Math.PI*2, (moonDistanceX), (moonDistanceY), (27 / data.sideralOrbit) * 0.003));
+              moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random() * Math.PI * 2, (moonDistanceX), (moonDistanceY), (27 / data.sideralOrbit) * 0.003));
             } else {
               let moonRadius = data.equaRadius;
-              moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random()*Math.PI*2, (moonDistanceX), (moonDistanceY), (27 / data.sideralOrbit) * 0.003));
+              moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random() * Math.PI * 2, (moonDistanceX), (moonDistanceY), (27 / data.sideralOrbit) * 0.003));
             }
           })
 
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  function getPlanetData(planetName) {
+  function getPlanetData(planetName='earth') {
     fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planetName}`)
       .then(response => {
         return response.json();
@@ -96,6 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  getPlanetData('jupiter');
+  getPlanetData();
 
 })

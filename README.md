@@ -1,25 +1,25 @@
-# JS Project Proposal: Sol
+JS Project Proposal: Sol
 
-## Background:
+Background:
 
 Sol is a 2D data visualization of our solar system's nine planets and their respective characteristics. This includes everything from physical characteristics (size, temperature, gravity) to orbital parameters (lunar bodies). First, Sol presents the user with the nine main planets. After choosing a specific planetary body, it fetches that body's unique data. That unique data is then dynamically rendered to highlight each planetary body's uniqueness. Sol presents all data in a futuristic, yet retro aesthetic, taking inspiration from the 1979 film Alien and its setting, the spaceship Nostromo. It aims to replicate an 8-bit desktop interface with outdated vector graphics.
 
-## Functionality & MVPs:
+Functionality & MVPs:
 
-### In Sol, users will be able to:
+In Sol, users will be able to:
 
 * Choose between the nine, main planets of our solar system.
 * Observe the orbital bodies of each respective planet and how they differ.
 * Observe a temperature visualization for each respective planet.
 * Initiate a gravity simulation for each respective planet.
 
-### In addition, this project will include:
+In addition, this project will include:
 
 * An About modal describing the background and structure of the data visualization.
 * A production README.
 
 
-## Wireframe:
+Wireframe:
 
 ![Sol Wireframe](./wireframe.png)
 
@@ -29,7 +29,7 @@ Sol is a 2D data visualization of our solar system's nine planets and their resp
 * Abstract Data Readouts will provide D3 renders of less tangible data.
 
 
-## Technologies, Libraries, APIs:
+Technologies, Libraries, APIs:
 
 * This project will be implemented with the following technologies:
 * The Solar System OpenData API: https://api.le-systeme-solaire.net/en/.
@@ -39,20 +39,20 @@ Sol is a 2D data visualization of our solar system's nine planets and their resp
 * npm to manage project dependencies.
 
 
-## Implementation Timeline:
+Implementation Timeline:
 
-* Friday Afternoon & Weekend: Setup project, including getting webpack up and running. Create Planet, Moon, Simulation classes and ensure that my data is being fetched properly. Get planet and moon canvas visualizations to show up on the screen and build basic structure for lunar orbits. Write formula functions that adapt orbital data for canvas design. Also begin setting up gravity and temperature canvases and respective classes.
+* Friday Afternoon & Weekend: Setup project, including getting webpack up and running. Create Planet, Moon, Simulation classes. Get planet and moon canvas visualizations to show up on the screen and build basic structure for lunar orbits. Write formula functions that adapt orbital data for canvas design. Also begin setting up gravity and temperature canvases and respective classes.
 
 * Monday: Dedicate this day toward implementing the underlying logic of Sol. Apply basic animation and ensure that I can get my Orbit canvas to dynamically render accurate, yet accessible representations of the individual planets and their lunar bodies. Ensure that my data is being fetched properly before creating planet links that fetch orbital, gravity, and temperature data from API. 
 
-* Tuesday: Focus on the gravity and temperature canvases. Create a basic environment for my gravity canvas and a FallingObject class for gravity simulation. Create a visually striking and informative temperature readout out of a canvas rendering and Temperature class.
+* Tuesday: Focus on the gravity and temperature canvases. Create a basic environment for my gravity canvas and a FallingObject class for gravity simulation. Create a visually striking and informative temperature readout out of a canvas rendering and Temperature class. Ensure that my data is being fetched properly.
 
 * Wednesday: Finish implementing data visualization interactivity, and focus on styling, as well as implementing the color scheme and styled nav links. If time, start on bonuses.
 
 * Thursday Morning: Deploy to GitHub pages. If time, rewrite this proposal as a production README.
 
 
-## Bonus Features:
+Bonus Features:
  
 * Add music and sounds for atmosphere.
 * Add ability to pause and resume simulations.
