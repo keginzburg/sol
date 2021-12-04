@@ -1,6 +1,6 @@
 const FallingObject = require("./fallingObject.js");
 
-function simulateGravity() {
+function simulateGravity(data) {
   const gravityCanvas = document.querySelector(".gravity_canvas");
   gravityCanvas.width = 250;
   gravityCanvas.height = 250;
@@ -11,9 +11,10 @@ function simulateGravity() {
     const spaceColor = "rgba(20,29,33,255)";
     ctx.fillStyle = spaceColor;
     ctx.fillRect(0, 0, gravityCanvas.width, gravityCanvas.height);
+
   }
 
-  function animate(object) {
+  function animate() {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, gravityCanvas.width, gravityCanvas.height);
     space();
@@ -23,12 +24,12 @@ function simulateGravity() {
   
   let object;
 
-  function createObject() {
-    object = new FallingObject();
-    animate(object);
+  function createObject(data) {
+    object = new FallingObject(data.gravity);
+    animate();
   }
 
-  createObject();
+  createObject(data);
 
 }
 

@@ -1,7 +1,7 @@
 const Planet = require("./planet.js");
 const Moon = require("./moon.js");
 
-function simulateOrbit(planetName) {
+function simulateOrbit(data) {
   const orbitCanvas = document.querySelector(".orbit_canvas");
   orbitCanvas.width = 500;
   orbitCanvas.height = 500;
@@ -11,8 +11,54 @@ function simulateOrbit(planetName) {
 
   function space() {
     const spaceColor = "rgba(20,29,33,255)";
+    //const retroGreen = "rgba(19,226,79,255)";
     ctx.fillStyle = spaceColor;
     ctx.fillRect(0, 0, orbitCanvas.width, orbitCanvas.height);
+    // ctx.strokeStyle = retroGreen;
+    // ctx.moveTo(30, 20);
+    // ctx.lineTo(30, 40);
+    // ctx.stroke();
+    // ctx.beginPath();
+    // ctx.strokeStyle = retroGreen;
+    // ctx.moveTo(20, 30);
+    // ctx.lineTo(40, 30);
+    // ctx.stroke();
+    // ctx.strokeStyle = retroGreen;
+    // ctx.moveTo(30, 460);
+    // ctx.lineTo(30, 480);
+    // ctx.stroke();
+    // ctx.beginPath();
+    // ctx.strokeStyle = retroGreen;
+    // ctx.moveTo(20, 470);
+    // ctx.lineTo(40, 470);
+    // ctx.stroke();
+    // ctx.strokeStyle = retroGreen;
+    // ctx.moveTo(460, 30);
+    // ctx.lineTo(480, 30);
+    // ctx.stroke();
+    // ctx.beginPath();
+    // ctx.strokeStyle = retroGreen;
+    // ctx.moveTo(470, 20);
+    // ctx.lineTo(470, 40);
+    // ctx.stroke();
+    // ctx.strokeStyle = retroGreen;
+    // ctx.moveTo(460, 30);
+    // ctx.lineTo(480, 30);
+    // ctx.stroke();
+    // ctx.beginPath();
+    // ctx.strokeStyle = retroGreen;
+    // ctx.moveTo(470, 20);
+    // ctx.lineTo(470, 40);
+    // ctx.stroke();
+    // ctx.strokeStyle = retroGreen;
+    // ctx.moveTo(460, 470);
+    // ctx.lineTo(480, 470);
+    // ctx.stroke();
+    // ctx.beginPath();
+    // ctx.strokeStyle = retroGreen;
+    // ctx.moveTo(470, 460);
+    // ctx.lineTo(470, 480);
+    // ctx.stroke();
   }
 
   function optimizeAxis(semimajorAxis) {
@@ -85,19 +131,23 @@ function simulateOrbit(planetName) {
     })
   }
 
-  function getPlanetData(planetName = 'earth') {
-    fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planetName}`)
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        planet = new Planet(orbitCanvas.width / 2, orbitCanvas.height / 2, data.meanRadius * 0.001);
-        captureMoons(data.moons);
-        animate();
-      });
-  }
+  planet = new Planet(orbitCanvas.width / 2, orbitCanvas.height / 2, data.meanRadius * 0.001);
+  captureMoons(data.moons);
+  animate();
 
-  getPlanetData(planetName);
+  // function getPlanetData(planetName = 'earth') {
+  //   fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planetName}`)
+  //     .then(response => {
+  //       return response.json();
+  //     })
+  //     .then(data => {
+  //       planet = new Planet(orbitCanvas.width / 2, orbitCanvas.height / 2, data.meanRadius * 0.001);
+  //       captureMoons(data.moons);
+  //       animate();
+  //     });
+  // }
+
+  //getPlanetData(planetName);
 }
 
 module.exports = simulateOrbit;
