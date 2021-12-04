@@ -13,6 +13,16 @@ body {
   justify-content: start;
 }
 
+h2 {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+h3 {
+  font-size: 8px;
+  padding-left: 10px;
+}
+
 .orbit_sim {
   width: 520px;
   height: 620px;
@@ -31,16 +41,6 @@ body {
   margin-left: 10px;
   border: 2px solid #13e24f;
   box-shadow: 0 0 5px #13e24f;
-}
-
-h2 {
-  font-size: 18px;
-  padding-left: 10px;
-}
-
-h3 {
-  font-size: 8px;
-  padding-left: 10px;
 }
 
 .orbit_canvas {
@@ -64,6 +64,19 @@ h3 {
 }
 
 .gravity_canvas {
+  border: 2px solid #13e24f;
+  box-shadow: 0 0 5px #13e24f;
+  width: 250px;
+  height: 250px;
+  margin-left: 10px;
+}
+
+.temperature_sim {
+  width: 251px;
+  height: 251px;
+}
+
+.temperature_canvas {
   border: 2px solid #13e24f;
   box-shadow: 0 0 5px #13e24f;
   width: 250px;

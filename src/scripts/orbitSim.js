@@ -121,7 +121,9 @@ function simulateOrbit(data) {
   }
 
   function animate() {
-    requestAnimationFrame(animate);
+    setTimeout(function() {
+      requestAnimationFrame(animate);
+    }, 1000/60);
     ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
     space();
 

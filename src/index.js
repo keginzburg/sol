@@ -1,5 +1,6 @@
 const simulateOrbit = require("./scripts/orbitSim.js");
 const simulateGravity = require("./scripts/gravitySim.js");
+const simulateTemp = require("./scripts/tempSim.js");
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       simulateOrbit(data);
       simulateGravity(data);
+      simulateTemp(data);
     });
   }
   getPlanetData("jupiter");

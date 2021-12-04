@@ -5,13 +5,12 @@ function simulateGravity(data) {
   gravityCanvas.width = 250;
   gravityCanvas.height = 250;
 
-  ctx = gravityCanvas.getContext('2d');
+  const ctx = gravityCanvas.getContext('2d');
 
   function space() {
     const spaceColor = "rgba(20,29,33,255)";
     ctx.fillStyle = spaceColor;
     ctx.fillRect(0, 0, gravityCanvas.width, gravityCanvas.height);
-
   }
 
   function animate() {
