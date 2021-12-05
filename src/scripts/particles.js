@@ -1,5 +1,5 @@
 class Particles {
-  constructor(x,y,z, ctx, particleRadius, povCenterX, povCenterY, planetCenterZ, fov) {
+  constructor(x,y,z, ctx, particleRadius, povCenterX, povCenterY, planetCenterZ, fov, color) {
     this.x = x;
     this.y = y;
     this.z = z;
@@ -12,6 +12,7 @@ class Particles {
     this.povCenterY = povCenterY;
     this.planetCenterZ = planetCenterZ;
     this.fov = fov;
+    this.color = color;
   }
 
   project(sin, cos) {
@@ -28,9 +29,9 @@ class Particles {
     this.ctx.beginPath();
     this.ctx.arc(this.xPov, this.yPov, this.particleRadius * this.sizePov, 0, Math.PI * 2);
     this.ctx.closePath();
-    this.ctx.shadowBlur = 5;
-    this.ctx.shadowColor = "rgba(19,226,79,255)";
-    this.ctx.fillStyle = "rgba(19,226,79,255)";
+    //this.ctx.shadowBlur = 2;
+    this.ctx.shadowColor = this.color;
+    this.ctx.fillStyle = this.color;
     this.ctx.fill();
   }
 }

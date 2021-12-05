@@ -12,7 +12,7 @@ function simulateOrbit(data) {
   function space() {
     const spaceColor = "rgba(20,29,33,255)";
     //const retroGreen = "rgba(19,226,79,255)";
-    ctx.fillStyle = spaceColor;
+    ctx.fillStyle = "rgba(0, 0, 0, 255)";
     ctx.fillRect(0, 0, orbitCanvas.width, orbitCanvas.height);
     // ctx.strokeStyle = retroGreen;
     // ctx.moveTo(30, 20);

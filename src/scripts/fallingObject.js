@@ -2,7 +2,7 @@ function FallingObject(velocity) {
   this.x = 125;
   this.y = -18;
   this.radius = 5
-  this.color = "rgba(19,226,79,255)";
+  this.color = "rgba(117,243,252,255)";
   this.gravity = velocity/60;
   this.gravitySpeed = 0;
 

@@ -15,5 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
       simulateTemp(data);
     });
   }
-  getPlanetData("jupiter");
+  getPlanetData("saturn");
 })
