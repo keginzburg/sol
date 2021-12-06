@@ -1,10 +1,11 @@
-function FallingObject(velocity, color) {
+function FallingObject(velocity) {
   this.x = 125;
   this.y = -18;
   this.ghostX = 125;
   this.ghostY = -18;
   this.radius = 5
-  this.color = color;
+  this.color = 'rgba(74,217,254,255)';
+  this.ghostColor = 'rgba(231, 38, 43, 255)';
   this.gravity = velocity/60;
   this.gravitySpeed = 0;
 
@@ -71,35 +72,68 @@ function FallingObject(velocity, color) {
   this.drawGhost = (ctx) => {
     ctx.beginPath();
     ctx.arc(this.ghostX, this.ghostY, this.radius, Math.PI, 0, false);
-    ctx.strokeStyle = "rgba(228,235,241,0.01)";
-    //ctx.fillStyle = "rgba(228,235,241,0.01)";
-    //ctx.shadowBlur = 3;
-    //ctx.shadowColor = "rgba(228,235,241,0.1)";
+    ctx.strokeStyle = this.ghostColor;
+    ctx.fillStyle = this.ghostColor;
+    ctx.shadowBlur = 3;
+    ctx.shadowColor = this.ghostColor;
     ctx.stroke();
-    //ctx.fill();
+    ctx.fill();
     ctx.closePath();
     //semicircle
     ctx.rect(119, this.ghostY, 12, 4);
-    ctx.strokeStyle = "rgba(228,235,241,0.4)";
-    ctx.stroke();
+    ctx.fillStyle = this.ghostColor;
+    ctx.fill();
     ctx.rect(117, this.ghostY + 4, 16, 8);
-    ctx.strokeStyle = "rgba(228,235,241,255)";
-    ctx.stroke();
+    ctx.fillStyle = this.ghostColor;
+    ctx.fill();
     //rectangle
     ctx.beginPath();
-    ctx.strokeStyle = "rgba(228,235,241,1)";
+    ctx.strokeStyle = this.ghostColor;
     ctx.moveTo(117, this.ghostY + 12);
     ctx.lineTo(115, this.ghostY + 17);
     ctx.lineTo(113, this.ghostY + 17);
     ctx.stroke();
     ctx.beginPath();
-    ctx.strokeStyle = "rgba(228,235,241,1)";
+    ctx.strokeStyle = this.ghostColor;
     ctx.moveTo(133, this.ghostY + 12);
     ctx.lineTo(135, this.ghostY + 17);
     ctx.lineTo(137, this.ghostY + 17);
     ctx.stroke();
     //legs
   }
+
+  // this.drawGhost = (ctx) => {
+  //   ctx.beginPath();
+  //   ctx.arc(this.ghostX, this.ghostY, this.radius, Math.PI, 0, false);
+  //   ctx.strokeStyle = "rgba(228,235,241,0.01)";
+  //   //ctx.fillStyle = "rgba(228,235,241,0.01)";
+  //   //ctx.shadowBlur = 3;
+  //   //ctx.shadowColor = "rgba(228,235,241,0.1)";
+  //   ctx.stroke();
+  //   //ctx.fill();
+  //   ctx.closePath();
+  //   //semicircle
+  //   ctx.rect(119, this.ghostY, 12, 4);
+  //   ctx.strokeStyle = "rgba(228,235,241,0.4)";
+  //   ctx.stroke();
+  //   ctx.rect(117, this.ghostY + 4, 16, 8);
+  //   ctx.strokeStyle = "rgba(228,235,241,255)";
+  //   ctx.stroke();
+  //   //rectangle
+  //   ctx.beginPath();
+  //   ctx.strokeStyle = "rgba(228,235,241,1)";
+  //   ctx.moveTo(117, this.ghostY + 12);
+  //   ctx.lineTo(115, this.ghostY + 17);
+  //   ctx.lineTo(113, this.ghostY + 17);
+  //   ctx.stroke();
+  //   ctx.beginPath();
+  //   ctx.strokeStyle = "rgba(228,235,241,1)";
+  //   ctx.moveTo(133, this.ghostY + 12);
+  //   ctx.lineTo(135, this.ghostY + 17);
+  //   ctx.lineTo(137, this.ghostY + 17);
+  //   ctx.stroke();
+  //   //legs
+  // }
 }
 
   // ctx.save()
