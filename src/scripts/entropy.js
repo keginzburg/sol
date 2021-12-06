@@ -98,9 +98,11 @@ class Entropy {
 
     const that = this;
 
-    setTimeout(function() {
-      requestAnimationFrame(that.render);
-    }, 1000/60);
+    requestAnimationFrame(that.render);
+
+    //setTimeout(function() {
+      //requestAnimationFrame(that.render);
+    //}, 1000/60);
   }
 
  

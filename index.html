@@ -12,23 +12,39 @@
 
 <body>
   <div class="main_content">
-    <div class="orbit_sim">
-      <div class="orbit_header">
-        <h2>LUNAR ORBITAL PATHWAYS</h2>
-        <h3 class="planet_body">PLANETARY BODY: </h3>
-        <h3>SATELLITES: </h3>
+    <div class="nav_bar">
+      <button>MERCURY</button>
+      <button>VENUS</button>
+      <button>EARTH</button>
+      <button>MARS</button>
+      <button>JUPITER</button>
+      <button>SATURN</button>
+      <button>URANUS</button>
+      <button>NEPTUNE</button>
+      <button>PLUTO</button>
+      <div class="nav_links">
+        <a href="https://github.com/keginzburg/sol"><img src="./assets/icons8-github-40.png" alt="GitHub Link"></a>
+        <a href="https://www.linkedin.com/in/kyleginzburg/"><img src="./assets/icons8-linkedin-40.png" alt="LinkedIn Link"></a>
       </div>
-      <canvas class="orbit_canvas"></canvas>
     </div>
-    <div class="middle_sims">
-      <div class="gravity_sim">
-        <div class="gravity_header">
-          <h2>GRAVITY SIM: </h2>
+    <div class="sim_content">
+      <div class="orbit_sim">
+        <div class="orbit_header">
+          <h2>LUNAR ORBITAL PATHWAYS</h2>
+          <h3 class="planet_body">PLANETARY BODY: </h3>
+          <h3>SATELLITES: </h3>
         </div>
-        <canvas class="gravity_canvas"></canvas>
+        <canvas class="orbit_canvas"></canvas>
       </div>
-      <div class="temperature_sim">
-        <canvas class="temperature_canvas"></canvas>
+      <div class="middle_sims">
+        <div class="gravity_sim">
+          <div class="gravity_header">
+          </div>
+          <canvas class="gravity_canvas"></canvas>
+        </div>
+        <div class="temperature_sim">
+          <canvas class="temperature_canvas"></canvas>
+        </div>
       </div>
     </div>
   </div>

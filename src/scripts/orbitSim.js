@@ -2,6 +2,8 @@ const Planet = require("./planet.js");
 const Moon = require("./moon.js");
 
 function simulateOrbit(data) {
+  let planetData = 0;
+  planetData = data;
   const orbitCanvas = document.querySelector(".orbit_canvas");
   orbitCanvas.width = 500;
   orbitCanvas.height = 500;
@@ -11,9 +13,9 @@ function simulateOrbit(data) {
 
   function space() {
     const spaceColor = "rgba(20,29,33,255)";
-    //const retroGreen = "rgba(19,226,79,255)";
-    ctx.fillStyle = "rgba(0, 0, 0, 255)";
+    ctx.fillStyle = spaceColor;
     ctx.fillRect(0, 0, orbitCanvas.width, orbitCanvas.height);
+    //const retroGreen = "rgba(19,226,79,255)";
     // ctx.strokeStyle = retroGreen;
     // ctx.moveTo(30, 20);
     // ctx.lineTo(30, 40);
@@ -92,8 +94,9 @@ function simulateOrbit(data) {
   }
 
   let planet;
-  let moons;
+  planet = new Planet(orbitCanvas.width / 2, orbitCanvas.height / 2, planetData.meanRadius * 0.001);
 
+  let moons;
   function captureMoons(moonData) {
     moons = [];
 
@@ -104,16 +107,16 @@ function simulateOrbit(data) {
           .then(response => {
             return response.json();
           })
-          .then(data => {
-            let moonDistanceX = optimizeAxis(data.semimajorAxis);
-            let moonDistanceY = semiMinorAxis(moonDistanceX, data.eccentricity);
-            let moonSpeed = optimizeSpeed(data.sideralOrbit);
+          .then(planetData => {
+            let moonDistanceX = optimizeAxis(planetData.semimajorAxis);
+            let moonDistanceY = semiMinorAxis(moonDistanceX, planetData.eccentricity);
+            let moonSpeed = optimizeSpeed(planetData.sideralOrbit);
 
-            if (data.meanRadius > data.equaRadius) {
-              let moonRadius = data.meanRadius;
+            if (planetData.meanRadius > planetData.equaRadius) {
+              let moonRadius = planetData.meanRadius;
               moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random() * Math.PI * 2, moonDistanceX, moonDistanceY, moonSpeed));
             } else {
-              let moonRadius = data.equaRadius;
+              let moonRadius = planetData.equaRadius;
               moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random() * Math.PI * 2, moonDistanceX, moonDistanceY, moonSpeed));
             }
           })
@@ -121,9 +124,11 @@ function simulateOrbit(data) {
   }
 
   function animate() {
-    setTimeout(function() {
-      requestAnimationFrame(animate);
-    }, 1000/60);
+    requestAnimationFrame(animate);
+
+    // setTimeout(function() {
+    //   requestAnimationFrame(animate);
+    // }, 1000/60);
     ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
     space();
 
@@ -132,9 +137,7 @@ function simulateOrbit(data) {
       moon.updateMoon(ctx2);
     })
   }
-
-  planet = new Planet(orbitCanvas.width / 2, orbitCanvas.height / 2, data.meanRadius * 0.001);
-  captureMoons(data.moons);
+  captureMoons(planetData.moons);
   animate();
 
   // function getPlanetData(planetName = 'earth') {
