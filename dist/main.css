@@ -73,8 +73,7 @@ table {
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-family: "halogen";
+  font-family: "pixel";
   text-shadow: 0 0 8px #13e24f;
   color: #13e24f;
   background-color: #141d21;
@@ -98,16 +97,17 @@ h4 {
   font-size: 16px;
   font-family: "pixel";
   letter-spacing: 2px;
-  padding: 0 5px 0;
+  padding: 0 3px 0 3px;
   margin: 1px 4px 1px;
   width: fit-content;
   text-shadow: 0 0 8px #13e24f;
   border: 0.5px solid #13e24f;
+  border-radius: 3px;
 }
 
-.main-content {
+.main_content {
   display: inline-block;
-  text-align: center;
+  margin-top: 55px;
 }
 
 .nav_bar {
@@ -128,7 +128,7 @@ h4 {
   color: #13e24f;
   background-color: #141d21;
   border: 1px solid #13e24f;
-  border-radius: 7px;
+  border-radius: 3px;
   box-shadow: 0 0 5px #13e24f;
   height: 30px;
   margin: 0 10px 0;

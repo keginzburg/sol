@@ -63,3 +63,9 @@ Sol is a 2D data visualization of our solar system's nine planets and their resp
 * Add 1G gravity lander for reference in gravity simulation.
 * Add interactive spaceship avatar that can "fly" through orbit simulation.
 * Add solar system modal.
+
+
+## CC Licensing:
+
+* "solar system" Favicon by [tvol](https://thenounproject.com/icon/solar-system-1245933/)
+
