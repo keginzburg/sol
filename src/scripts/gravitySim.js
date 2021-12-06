@@ -19,13 +19,21 @@ function simulateGravity(data) {
     space();
 
     object.updateObject(ctx);
+    ghost.updateGhost(ctx, object);
   }
   
   let object;
+  let ghost;
 
   function createObject(data) {
-    object = new FallingObject(data.gravity);
-    animate();
+    // if (data.gravity === 9.8) {
+    //   object = new FallingObject(data.gravity, "rgba(228,235,241,255)");
+    //   animate();
+    // } else {
+      object = new FallingObject(data.gravity, "rgba(117,243,252,255)");
+      ghost = new FallingObject(9.8, "rgba(228,235,241,0.3)")
+      animate();
+    
   }
 
   createObject(data);

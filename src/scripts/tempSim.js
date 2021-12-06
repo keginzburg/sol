@@ -5,12 +5,12 @@ function simulateTemp(data) {
   tempCanvas.width = 250;
   tempCanvas.height = 250;
 
-  const ctx = tempCanvas.getContext('2d');
+  const ctx3 = tempCanvas.getContext('2d');
 
   function space() {
     const spaceColor = "rgba(20,29,33,255)";
-    ctx.fillStyle = spaceColor;
-    ctx.fillRect(0, 0, gravityCanvas.width, gravityCanvas.height);
+    ctx3.fillStyle = spaceColor;
+    ctx3.fillRect(0, 0, gravityCanvas.width, gravityCanvas.height);
   }
 
   // //function animate() {
@@ -19,7 +19,7 @@ function simulateTemp(data) {
   //   space();
   // //}
 
-  let entropy = new Entropy(ctx, data);
+  let entropy = new Entropy(ctx3, data);
   entropy.createParticles();
   entropy.render();
   //animate();

@@ -6,7 +6,7 @@ class Particles {
     this.xPov = 0;
     this.yPov = 0;
     this.sizePov = 0;
-    this.ctx = ctx;
+    this.ctx3 = ctx;
     this.particleRadius = particleRadius;
     this.povCenterX = povCenterX;
     this.povCenterY = povCenterY;
@@ -26,13 +26,12 @@ class Particles {
   drawEntropy(sin, cos) {
     this.project(sin, cos);
 
-    this.ctx.beginPath();
-    this.ctx.arc(this.xPov, this.yPov, this.particleRadius * this.sizePov, 0, Math.PI * 2);
-    this.ctx.closePath();
-    //this.ctx.shadowBlur = 2;
-    this.ctx.shadowColor = this.color;
-    this.ctx.fillStyle = this.color;
-    this.ctx.fill();
+    this.ctx3.beginPath();
+    this.ctx3.arc(this.xPov, this.yPov, this.particleRadius * this.sizePov, 0, Math.PI * 2);
+    this.ctx3.closePath();
+    this.ctx3.shadowColor = this.color;
+    this.ctx3.fillStyle = this.color;
+    this.ctx3.fill();
   }
 }
 

@@ -15,7 +15,7 @@ class Entropy {
     this.temperature = data.avgTemp;
 
 
-    this.ctx = ctx;
+    this.ctx3 = ctx;
     this.render = this.render.bind(this);
   }
 
@@ -79,13 +79,13 @@ class Entropy {
       const x = this.planetRadius * Math.sin(phi) * Math.cos(theta);
       const y = this.planetRadius * Math.sin(phi) * Math.sin(theta);
       const z = (this.planetRadius * Math.cos(phi)) + this.planetCenterZ;
-      this.particles.push(new Particles(x, y, z, this.ctx, this.particleRadius, this.povCenterX, this.povCenterY, this.planetCenterZ, this.fov, this.tempColor(i)));
+      this.particles.push(new Particles(x, y, z, this.ctx3, this.particleRadius, this.povCenterX, this.povCenterY, this.planetCenterZ, this.fov, this.tempColor(i)));
     }
   }
 
 
   render() {
-    this.ctx.clearRect(0, 0, 250, 250);
+    this.ctx3.clearRect(0, 0, 250, 250);
 
     this.rotation += 0.008;
 

@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let navBar = document.querySelector(".nav_bar");
 
   const ctx = document.getElementById('myChart').getContext('2d');
+
   const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -25,9 +26,27 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     options: {
       scales: {
+        x: {
+          ticks: {
+            color: "#13e24f",
+          },
+          grid: {
+            color: "#13e24f",
+          }
+        },
         y: {
-          beginAtZero: true
-        }
+          ticks: {
+            color: "#13e24f",
+          },
+          grid: {
+            color: "#13e24f",
+          }
+        },
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }],
       },
       plugins: {
         legend: {
@@ -36,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+  ctx.shadowBlur = 4;
+  ctx.shadowColor = "rgba(19, 226, 79, 255)";
 
   navBar.addEventListener('click', function(event) {
     let planetName = event.target.innerText;
