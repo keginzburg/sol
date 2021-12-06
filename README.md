@@ -67,5 +67,5 @@ Sol is a 2D data visualization of our solar system's nine planets and their resp
 
 ## CC Licensing:
 
-* "solar system" Favicon by [tvol](https://thenounproject.com/icon/solar-system-1245933/)
+* Favicon [solar system](https://thenounproject.com/icon/solar-system-1245933/) by [Ralf Schmitzer](https://thenounproject.com/ralfschmitzer/).
 
