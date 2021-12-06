@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let navBar = document.querySelector(".nav_bar");
   navBar.addEventListener('click', function(event) {
     let planetName = event.target.innerText;
-    //console.log(planetName);
 
     function getPlanetData(planetName = 'earth') {
       fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planetName}`)
@@ -14,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
           return response.json();
         })
         .then(data => {
-          //console.log(data);
-          //console.log(planetName);
-            //console.log(data);
             simulateOrbit(data);
             simulateGravity(data);
             simulateTemp(data);
