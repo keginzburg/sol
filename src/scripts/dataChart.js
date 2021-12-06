@@ -8,7 +8,7 @@ function renderChart(chart, fetchedData) {
     moons = 0;
   }
   let gravity = fetchedData.gravity;
-  let temperature = fetchedData.avgTemp;
+  let density = fetchedData.density;
 
   function addData(chart, planetData) {
     chart.data.datasets.forEach((dataset) => {
@@ -28,7 +28,7 @@ function renderChart(chart, fetchedData) {
   removeData(myChart);
   addData(myChart, moons);
   addData(myChart, gravity);
-  addData(myChart, temperature);
+  addData(myChart, density);
 
 }
 

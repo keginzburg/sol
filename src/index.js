@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Moons', 'Grav', 'Temp'],
+      labels: ['Moons', 'Gravity', 'Density'],
       datasets: [{
         label: "",
         data: [],
