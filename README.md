@@ -54,13 +54,15 @@ Sol is a 2D data visualization of our solar system's nine planets and their resp
 
 ## Bonus Features:
 
-* Emulate Alien 1979 aesthetic.
-* Add music and sounds for atmosphere.
-* Add ability to pause and resume simulations.
-* Add improved data identifiers for planets and respective bodies.
+* ~~Emulate Alien 1979 aesthetic.~~
+* ~~Add music and sounds for atmosphere.~~
+* ~~Add D3 graph visualizations for abstract data.~~
+* ~~Add 1G gravity lander for reference in gravity simulation.~~
+* Add retro computer monitor background around main content.
+* Add more detail to lunar lander in gravity simulation.
 * Add dynamic backgrounds for canvas.
-* Add D3 graph visualizations for abstract data.
-* Add 1G gravity lander for reference in gravity simulation.
+* Add improved data identifiers for planets and respective bodies.
+* Add ability to pause and resume simulations.
 * Add interactive spaceship avatar that can "fly" through orbit simulation.
 * Add solar system modal.
 
