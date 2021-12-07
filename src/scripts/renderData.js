@@ -8,15 +8,15 @@ function renderData(data) {
   const moonsHeader = document.querySelector(".planet_moons");
   const temperatureHeader = document.querySelector(".planet_temperature");
 
-  nameHeader.innerText = data.id;
+  nameHeader.innerText = data.name;
   nameHeader.style.textIndent = 0;
   angloHeader.innerText = data.englishName;
   angloHeader.style.textIndent = 0;
-  massHeader.innerText = `${data.mass.massValue} x 10^${data.mass.massExponent}`;
+  massHeader.innerText = `${data.mass.massValue} x 10^${data.mass.massExponent} KG`;
   massHeader.style.textIndent = 0;
-  densityHeader.innerText = `${data.density} grams/cm^3`;
+  densityHeader.innerText = `${data.density} G/CM^3`;
   densityHeader.style.textIndent = 0;
-  gravityHeader.innerText = `${data.gravity} meters/sec^2`;
+  gravityHeader.innerText = `${data.gravity} M/S^2`;
   gravityHeader.style.textIndent = 0;
   if (data.moons !== null) {
     moonsHeader.innerText = data.moons.length;
@@ -25,7 +25,7 @@ function renderData(data) {
     moonsHeader.innerText = 0;
     moonsHeader.style.textIndent = 0;
   }
-  temperatureHeader.innerText = `${Math.ceil((data.avgTemp - 273.15)*(9/5)+32)} Fahrenheit`;
+  temperatureHeader.innerText = `${Math.ceil((data.avgTemp - 273.15)*(9/5)+32)}°F`;
   temperatureHeader.style.textIndent = 0;
 }
 

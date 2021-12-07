@@ -34,6 +34,7 @@ h2 {
   font-family: "borg";
   font-size: 120px;
   padding-left: 10px;
+  margin-bottom: -20px;
 }
 
 h3 {
@@ -73,10 +74,11 @@ h3 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: fit-content;
+  width: 1022px;
   height: 50px;
   border: 2px solid rgba(19, 226, 79, 255);
   box-shadow: 0 0 5px #13e24f;
+  margin-bottom: 3px;
 
 }
 
@@ -120,7 +122,7 @@ h3 {
 
 
 .nav_links a:last-child {
-  margin-left: 8px;
+  margin-left: 25px;
 }
 
 .sim_content {
@@ -142,19 +144,19 @@ h3 {
 
 .orbit_header {
   display: inline - block;
-  width: 500px;
-  margin-left: 10px;
+  width: 200px;
   border: 2px solid rgba(19, 226, 79, 255);
   box-shadow: 0 0 5px #13e24f;
-  margin-bottom: -30px;
+  padding-bottom: -50px;
+  margin-bottom: 3px;
 }
 
 .orbit_canvas {
   border: 2px solid rgba(19, 226, 79, 255);
   box-shadow: 0 0 5px #13e24f;
-  width: 500px;
-  height: 500px;
-  margin-left: 10px;
+  width: 508px;
+  height: 508px;
+  //margin-left: 10px;
 }
 
 // .gravity_sim {
@@ -169,13 +171,17 @@ h3 {
 //   align-items: space-around;
 // }
 
+.middle_sims {
+  margin-left: 3px;
+}
+
 .gravity_canvas {
-  margin-top: 113px;
+  //margin-top: 113px;
   border: 2px solid rgba(19, 226, 79, 255);
   box-shadow: 0 0 5px #13e24f;
   width: 250px;
   height: 250px;
-  margin-left: 10px;
+  //margin-left: 10px;
 }
 
 .temperature_sim {
@@ -188,11 +194,11 @@ h3 {
   box-shadow: 0 0 5px #13e24f;
   width: 250px;
   height: 250px;
-  margin-left: 10px;
+  //margin-left: 10px;
 }
 
 .readout_data {
-  margin-top: 113px;
+  //margin-top: 113px;
   margin-left: 3px;
   border: 2px solid rgba(19, 226, 79, 255);
   box-shadow: 0 0 5px #13e24f;
