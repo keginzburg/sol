@@ -75,19 +75,19 @@ body {
   display: flex;
   justify-content: center;
   font-family: "pixel";
-  text-shadow: 0 0 8px #13e24f;
+  text-shadow: 0 0 6px #13e24f;
   color: #13e24f;
   background-color: #141d21;
 }
 
 .modal_container {
   position: absolute;
-  top: 50%;
+  top: 35%;
   z-index: 2;
   width: 500px;
   background-color: #141d21;
   border: 2px solid #13e24f;
-  padding: 10px 15px 10px 15px;
+  padding: 15px 15px 15px 15px;
   box-shadow: 0 0 5px #13e24f;
 }
 
@@ -106,10 +106,17 @@ body {
   padding: 0;
 }
 
+.open_modal_button:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+  cursor: default;
+}
+
 .pilot_manual {
   display: flex;
   justify-content: center;
-  margin-left: -10px;
+  margin-left: 45px;
+  margin-right: 65px;
 }
 
 .diagram {
@@ -120,7 +127,7 @@ body {
   box-shadow: 0 0 2px #13e24f;
 }
 .diagram .nav_diagram {
-  width: 302px;
+  width: 202px;
   height: 30px;
   border: 1px dotted #13e24f;
   border-bottom: none;
@@ -132,37 +139,37 @@ body {
   display: flex;
 }
 .diagram .orbit_diagram {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border: 1px dotted #13e24f;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .diagram .middle_sims_diagram {
-  width: 75px;
-  height: 150px;
+  width: 50px;
+  height: 100px;
   border-top: 1px dotted #13e24f;
   border-bottom: 1px dotted #13e24f;
 }
 .diagram .middle_sims_diagram .gravity_diagram {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   border-bottom: 1px dotted #13e24f;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .diagram .middle_sims_diagram .temperature_diagram {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .diagram .readout_diagram {
-  width: 75px;
-  height: 150px;
+  width: 50px;
+  height: 100px;
   border: 1px dotted #13e24f;
   display: flex;
   justify-content: center;
@@ -171,13 +178,37 @@ body {
 
 .modal_legend {
   text-align: left;
-  margin: 40px 0 0px 0;
+  margin: 16px 0 0px 0;
 }
 .modal_legend h3 {
   font-family: "halogen";
   font-size: 12px;
   letter-spacing: 2px;
   margin-top: 5px;
+}
+
+.modal_button_container {
+  margin-left: 204px;
+  margin-top: 17px;
+  margin-bottom: 7px;
+}
+.modal_button_container .close_modal_button {
+  font-family: "halogen";
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #13e24f;
+  color: #13e24f;
+  background-color: #141d21;
+  border: 1px solid #13e24f;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #13e24f;
+  height: 30px;
+  margin: 0 10px 0;
+}
+.modal_button_container .close_modal_button:hover {
+  box-shadow: 0 0 10px #13e24f;
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 h2 {
@@ -231,8 +262,8 @@ h3 {
 }
 .nav_bar h2 {
   font-size: 35px;
-  letter-spacing: 2px;
-  padding-left: 10px;
+  letter-spacing: 4px;
+  padding-left: 16px;
   margin-bottom: -6px;
 }
 
