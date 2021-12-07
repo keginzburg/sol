@@ -22,6 +22,7 @@
 }
 
 body {
+  position: relative;
   display: flex;
   justify-content: center;
   font-family: "pixel";
@@ -30,9 +31,122 @@ body {
   background-color: rgba(20, 29, 33, 255);
 }
 
+.modal_container {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 500px;
+  background-color: rgba(20, 29, 33, 255);
+  border: 2px solid rgba(19, 226, 79, 255);
+  padding: 10px 15px 10px 15px;
+  box-shadow: 0 0 5px #13e24f;
+}
+
+.intro_modal {
+  //display: flex;
+  //justify-content: space-around;
+
+  h2 {
+  display: inline-block;
+  font-family: "borg";
+  font-size: 112px;
+      padding-left: 64px;
+    margin-bottom: -8px;
+}
+
+  h3 {
+    display: inline-block;
+    width: 60%;
+    font-family: "halogen";
+    letter-spacing: 3px;
+    padding: 0;
+  }
+}
+
+.pilot_manual {
+  display: flex;
+  justify-content: center;
+  margin-left: -10px;
+}
+
+.diagram {
+  margin: auto;
+  font-family: "halogen";
+  font-size: 16px;
+  width: fit-content;
+  box-shadow: 0 0 2px rgb(19 226 79);
+
+  .nav_diagram {
+  width: 302px;
+  height: 30px;
+  border: 1px dotted rgba(19, 226, 79, 255);
+  border-bottom: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_diagram {
+  display: flex;
+}
+
+.orbit_diagram {
+    width: 150px;
+    height: 150px;
+    border: 1px dotted rgba(19, 226, 79, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.middle_sims_diagram {
+  width: 75px;
+  height: 150px;
+  border-top: 1px dotted rgba(19, 226, 79, 255);
+  border-bottom: 1px dotted rgba(19, 226, 79, 255);
+
+  .gravity_diagram {
+    width: 75px;
+    height: 75px;
+    border-bottom: 1px dotted rgba(19, 226, 79, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .temperature_diagram {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.readout_diagram {
+  width: 75px;
+  height: 150px;
+  border: 1px dotted rgba(19, 226, 79, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+
+.modal_legend {
+  text-align: left;
+  margin: 40px 0 0px 0;
+  h3 {
+    font-family: "halogen";
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+  }
+}
+
 h2 {
   font-family: "borg";
-  font-size: 120px;
+  font-size: 130px;
   padding-left: 10px;
   margin-bottom: -20px;
 }
@@ -67,7 +181,8 @@ h3 {
 
 .main_content {
   display: inline-block;
-  margin-top: 55px;
+  margin-top: 100px;
+  z-index: 1;
 }
 
 .nav_bar {
@@ -79,6 +194,13 @@ h3 {
   border: 2px solid rgba(19, 226, 79, 255);
   box-shadow: 0 0 5px #13e24f;
   margin-bottom: 3px;
+
+  h2 {
+    font-size: 35px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+    margin-bottom: -6px;
+  }
 
 }
 
