@@ -89,20 +89,26 @@ h3 {
   font-size: 16px;
   font-family: "pixel";
   letter-spacing: 2px;
-  padding: 0px 5px 0;
+  padding: 1px 5px 0px;
   text-shadow: 0 0 8px #13e24f;
 }
 
-h4 {
-  font-size: 16px;
-  font-family: "pixel";
-  letter-spacing: 2px;
-  padding: 0 3px 0 3px;
-  margin: 1px 4px 1px;
-  width: fit-content;
-  text-shadow: 0 0 8px #13e24f;
+.h4_container {
+  display: inline-block;
+  margin: 1px 0 0 4px;
+  width: 240px;
+  height: 16px;
   border: 0.5px solid #13e24f;
   border-radius: 3px;
+  box-shadow: 0 0 5px #13e24f;
+}
+.h4_container h4 {
+  font-size: 16px;
+  text-indent: -9999px;
+  padding: 0 0 1px 5px;
+  font-family: "pixel";
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #13e24f;
 }
 
 .main_content {

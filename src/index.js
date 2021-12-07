@@ -2,6 +2,7 @@ const simulateOrbit = require("./scripts/orbitSim.js");
 const simulateGravity = require("./scripts/gravitySim.js");
 const simulateTemp = require("./scripts/tempSim.js");
 const renderChart = require("./scripts/dataChart.js");
+const renderData = require("./scripts/renderData.js");
 
 document.addEventListener('DOMContentLoaded', () => {
   let navBar = document.querySelector(".nav_bar");
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ctx.shadowColor = "rgba(19, 226, 79, 255)";
 
   navBar.addEventListener('click', function(event) {
+
     let planetName = event.target.innerText;
 
     function getPlanetData(planetName = 'earth') {
@@ -71,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             simulateGravity(data);
             simulateTemp(data);
             renderChart(myChart, data);
+            renderData(data);
         });
     }
     getPlanetData(planetName);
