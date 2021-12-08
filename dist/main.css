@@ -394,6 +394,27 @@ h3 {
   height: 508px;
 }
 
+.orbit_pause {
+  position: absolute;
+  top: 94px;
+  left: 62px;
+  z-index: 7;
+  color: #13e24f;
+  background-color: #141d21;
+  border: 1px solid #13e24f;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #13e24f;
+}
+.orbit_pause:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+.orbit_pause i {
+  padding: 3px 1px 3px 1px;
+  font-size: 16px;
+  filter: drop-shadow(0 0 1px #13e24f);
+}
+
 .middle_sims {
   margin-left: 3px;
 }

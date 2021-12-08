@@ -373,8 +373,54 @@ h3 {
   box-shadow: 0 0 5px #13e24f;
   width: 508px;
   height: 508px;
-  //margin-left: 10px;
 }
+
+  // .orbit_play {
+  //   position: absolute;
+  //   top: 92px;
+  //   left: 60px;
+  //   z-index: 7;
+  //   color: rgba(19, 226, 79, 255);
+  //   background-color: rgba(20, 29, 33, 255);
+  //   border: 1px solid rgba(19, 226, 79, 255);
+  //   border-radius: 3px;
+  //   box-shadow: 0 0 3px #13e24f;
+
+  //   &:hover {
+  //     transform: scale(1.1);
+  //     transition: 0.4s;
+  //   }
+
+  //   i {
+  //     font-size: 11px;
+  //     padding-bottom: 3px;
+  //     filter: drop-shadow(0 0 1px #13e24f);
+  //   }
+
+  // }
+
+  .orbit_pause {
+    position: absolute;
+    top: 94px;
+    left: 62px;
+    z-index: 7;
+    color: rgba(19, 226, 79, 255);
+    background-color: rgba(20, 29, 33, 255);
+    border: 1px solid rgba(19, 226, 79, 255);
+    border-radius: 3px;
+    box-shadow: 0 0 3px #13e24f;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.4s;
+    }
+    
+    i {
+      padding: 3px 1px 3px 1px;
+      font-size: 16px;
+      filter: drop-shadow(0 0 1px #13e24f);
+    }
+  }
 
 // .gravity_sim {
 //   margin-top: 47px;

@@ -36,16 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
         y: {
           ticks: {
             color: "#13e24f",
+            beginAtZero: true
           },
           grid: {
             color: "#13e24f",
           }
-        },
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }],
+        }
       },
       plugins: {
         legend: {
@@ -102,6 +98,20 @@ document.addEventListener('DOMContentLoaded', () => {
       volumeButton.setAttribute('src', "./assets/icons/volume-up-solid.png");
       count = true;
       document.getElementById("music").muted = false;
+    }
+  })
+
+  let pause = true;
+  const pauseButton = document.querySelector(".orbit_pause");
+  pauseButton.addEventListener('click', function () {
+    if (pause) {
+      pauseButton.id = 'on';
+      pause = false;
+      pauseButton.innerHTML = '<i class="fas fa-play"></i>';
+    } else {
+      pauseButton.id = 'off';
+      pause = true;
+      pauseButton.innerHTML = '<i class="fas fa-pause"></i>'
     }
   })
 

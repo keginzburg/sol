@@ -2,7 +2,7 @@ const Planet = require("./planet.js");
 const Moon = require("./moon.js");
 
 function simulateOrbit(data) {
-  let planetData = 0;
+  let planetData;
   planetData = data;
   const orbitCanvas = document.querySelector(".orbit_canvas");
   orbitCanvas.width = 500;
@@ -124,19 +124,56 @@ function simulateOrbit(data) {
   }
 
   function animate() {
-    requestAnimationFrame(animate);
+    const pauseButton = document.querySelector(".orbit_pause");
+    if (pauseButton.id === "off") {
+      requestAnimationFrame(animate);
+      // setTimeout(function() {
+      //   requestAnimationFrame(animate);
+      // }, 1000/60);
+      ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
+      space();
 
-    // setTimeout(function() {
-    //   requestAnimationFrame(animate);
-    // }, 1000/60);
-    ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
-    space();
+      planet.updatePlanet(ctx);
+      moons.forEach(moon => {
+        moon.updateMoon(ctx2);
+      })
+    } else if (pauseButton.id === "on") {
+      requestAnimationFrame(animate)
+      ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
+      space();
 
-    planet.updatePlanet(ctx);
-    moons.forEach(moon => {
-      moon.updateMoon(ctx2);
-    })
+      planet.updatePlanet(ctx);
+      moons.forEach(moon => {
+        moon.pauseMoon(ctx2);
+      })
+    }
   }
+
+  //   requestAnimationFrame(animate);
+
+  //   // setTimeout(function() {
+  //   //   requestAnimationFrame(animate);
+  //   // }, 1000/60);
+  //   ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
+  //   space();
+
+  //   planet.updatePlanet(ctx);
+  //   moons.forEach(moon => {
+  //     moon.updateMoon(ctx2);
+  //   })
+  // }
+
+  // function pause() {
+  //   requestAnimationFrame(pause)
+  //   ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
+  //   space();
+
+  //   planet.updatePlanet(ctx);
+  //   moons.forEach(moon => {
+  //     moon.pauseMoon(ctx2);
+  //   })
+  // }
+
   captureMoons(planetData.moons);
   animate();
 

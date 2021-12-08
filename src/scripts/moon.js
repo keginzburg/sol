@@ -15,6 +15,12 @@ function Moon(x, y, radius, radians, distanceX, distanceY, velocity) {
     this.drawMoon(ctx2);
   }
 
+  this.pauseMoon = (ctx2) => {
+    this.x = x + Math.cos(this.radians) * this.distanceX;
+    this.y = y + Math.sin(this.radians) * this.distanceY;
+    this.drawMoon(ctx2);
+  }
+
   this.drawMoon = (ctx2) => {
     ctx2.beginPath();
     ctx2.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
