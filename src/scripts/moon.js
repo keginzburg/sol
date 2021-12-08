@@ -1,4 +1,4 @@
-function Moon(x, y, radius, radians, distanceX, distanceY, velocity) {
+function Moon(x, y, radius, radians, distanceX, distanceY, velocity, name) {
   this.x = x;
   this.y = y;
   this.radius = radius;
@@ -7,6 +7,7 @@ function Moon(x, y, radius, radians, distanceX, distanceY, velocity) {
   this.distanceX = distanceX;
   this.distanceY = distanceY;
   this.velocity = velocity;
+  this.name = name;
 
   this.updateMoon = (ctx2) => {
     this.radians += this.velocity;

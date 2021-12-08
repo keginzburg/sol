@@ -111,6 +111,8 @@ function simulateOrbit(data) {
             let moonDistanceX = optimizeAxis(planetData.semimajorAxis);
             let moonDistanceY = semiMinorAxis(moonDistanceX, planetData.eccentricity);
             let moonSpeed = optimizeSpeed(planetData.sideralOrbit);
+            let name = planetData.englishName;
+            console.log(name);
 
             if (planetData.meanRadius > planetData.equaRadius) {
               let moonRadius = planetData.meanRadius;
