@@ -94,17 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let count = true;
   const volumeButton = document.getElementById("volume");
   volumeButton.addEventListener('click', function () {
-    //document.getElementById("music").muted = true;
-    // if (count % 2 === 0) {
-    //   volumeButton.src = "./assets/icons/volume-off-solid.png";
-    //   count += 1;
-    //   //document.getElementById("music").muted = true;
-    // } else if (count % 2 !== 0) {
-    //   volumeButton.src = "./assets/icons/volume-up-solid.png";
-    //   count += 1;
-    // //   //document.getElementById("music").muted = true;
-    // }
-
     if (count) {
       volumeButton.setAttribute('src', "./assets/icons/volume-off-solid.png");
       count = false;

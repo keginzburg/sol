@@ -27,30 +27,36 @@ body {
   font-family: "pixel";
   text-shadow: 0 0 6px #13e24f;
   color: rgba(19, 226, 79, 255);
-  background-color: rgba(20, 29, 33, 255);
+  background-image: url('../assets/images/overlook_carpet.jpeg');
+  //background-color: rgba(20, 29, 33, 255);
 }
 
 .computer_casing {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  background-color: rgba(214, 191, 145, 255);
+  //background-color: rgba(161, 157, 158, 255);
+  background-color: rgba(161, 157, 158, 255);
   border-top-left-radius:20px;
   border-top-right-radius: 20px;
-  width: 1340px;
-  height: 800px;
+  width: 1260px;
+  height: 775px;
   z-index: 1;
 }
 
 .screen_casing {
-  margin-top: 45px;
+  margin-top: 40px;
   margin-bottom: 45px;
   display: flex;
   justify-content: center;
-  background-color: rgba(105, 96, 68, 255);
-  background-image: linear-gradient(rgba(105, 96, 68, 255), rgba(250, 226, 169, 255));
+  //background-color: rbga(109, 104, 106, 255);
+  //background-image: linear-gradient(rbga(109, 104, 106, 255), rbga(193, 191, 192, 255));
+  background-color: rgba(109, 104, 106, 255);
+  background-image: linear-gradient(rgba(109, 104, 106, 255), rgba(193, 191, 192, 255));
   //rgba(170, 155, 111, 255)
   //main casing rgba(214, 191, 145, 255)
-  border: 1px solid rgba(214, 191, 145, 255);
+  //border: 1px solid rgba(161, 157, 158, 255);
+  border: 1px solid rgba(161, 157, 158, 255);
   width: 1170px;
   height: 675px;
   z-index: 2;
@@ -62,7 +68,7 @@ body {
   background-color: rgba(20, 29, 33, 255);
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: inset 0px 0px 30px black;
+  box-shadow: inset 0px 0px 15px black;
   width: 1125px;
   height: 625px;
   z-index: 3;
@@ -77,7 +83,7 @@ body {
 
 .modal_container {
   position: absolute;
-  top: 35%;
+  top: 25%;
   z-index: 2;
   width: 500px;
   background-color: rgba(20, 29, 33, 255);
