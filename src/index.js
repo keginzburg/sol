@@ -59,10 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
   navBar.addEventListener('click', function(event) {
 
     let planetName = event.target.innerText;
+    moonInfo.innerText = "moon id:";
 
     function getPlanetData(planetName = 'earth') {
       fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planetName}`)
         .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not OK');
+          }
           return response.json();
         })
         .then(data => {
@@ -71,6 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             simulateTemp(data);
             renderChart(myChart, data);
             renderData(data);
+        })
+        .catch(error => {
+          console.error('Houston, we have a problem:', error);
         });
     }
     getPlanetData(planetName);
@@ -134,9 +141,12 @@ document.addEventListener('DOMContentLoaded', () => {
     moons.forEach(moon => {
       let moonX = Math.floor(moon.x);
       let moonY = Math.floor(moon.y);
-      if ((mouse.x-6 < moonX+5 && mouse.x-6 > moonX-5) && (mouse.y-4 < moonY+5 && mouse.y-4 > moonY-5)) {
-        moonInfo.innerText = `moon name: ${moon.name}`;
-
+      if ((mouse.x-6 < moonX+10 && mouse.x-6 > moonX-10) && (mouse.y-4 < moonY+5 && mouse.y-4 > moonY-5)) {
+        if(moon.name === "") {
+          moonInfo.innerText = "moon id: unknown";
+        } else {
+          moonInfo.innerText = `moon id: ${moon.name.toLowerCase()}`;
+        }
       }
     })
       // if (e.x===moonX && e.y===moonY) {
