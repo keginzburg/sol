@@ -58,7 +58,7 @@ Sol is a 2D data visualization of our solar system's nine planets and their resp
 * ~~Add music and sounds for atmosphere.~~
 * ~~Add D3 graph visualizations for abstract data.~~
 * ~~Add 1G gravity lander for reference in gravity simulation.~~
-* Add retro computer monitor background around main content.
+* ~~Add retro computer monitor background around main content.~~
 * Add more detail to lunar lander in gravity simulation.
 * Add dynamic backgrounds for canvas.
 * Add improved data identifiers for planets and respective bodies.
@@ -70,4 +70,4 @@ Sol is a 2D data visualization of our solar system's nine planets and their resp
 ## CC Licensing:
 
 * Favicon [solar system](https://thenounproject.com/icon/solar-system-1245933/) by [Ralf Schmitzer](https://thenounproject.com/ralfschmitzer/).
-
+* [Volume](https://fontawesome.com/v5.15/icons/volume-up?style=solid) icons were provided by [Font Awesome](https://fontawesome.com/license) and only had colors changes.

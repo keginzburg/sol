@@ -13,99 +13,125 @@
   <script src="https://kit.fontawesome.com/acad568650.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="modal_container">
-    <div class="intro_modal">
-      <h2>SOL</h2>
-      <h3>hello. i am sol: your space freighter's onboard data visualization of our star system's nine planets. see below for pilot's manual:</h3>
-    </div>
-    <div class="pilot_manual">
-      <div class="diagram">
-        <div class="nav_diagram"><span>A</span></div>
-        <div class="main_diagram">
-        <div class="orbit_diagram"><span>B</span></div>
-          <div class="middle_sims_diagram">
-            <div class="gravity_diagram"><span>C</span></div>
-            <div class="temperature_diagram"><span>D</span></div>
-        </div>
-          <div class="readout_diagram"><span>E</span></div>
-      </div>
-      </div>
-      <div class="modal_legend">
-        <h3>A: navigation</h3>
-        <h3>B: lunar orbital sim</h3>
-        <h3>C: gravity sim</h3>
-        <h3>D: temperature map</h3>
-        <h3>E: data readout</h3>
-      </div>
-    </div>
-    <div class="modal_button_container">
-      <button class="close_modal_button">INITIATE</button>
-    </div>
-  </div>
-  <div class="main_content">
-    <!--<div class="orbit_header">
+  <!--<img class="background_image" src="./assets/images/edited_computer_Screen_2.png" alt="computer screen">-->
+  <!--<div class="main_container">-->
+  <div class="computer_casing">
+    <div class="screen_casing">
+      <div class="screen">
+        <div class="program_container">
+          <div class="modal_container">
+            <div class="intro_modal">
               <h2>SOL</h2>
-    </div>-->
-    <div class="nav_bar">
-      <h2 class="open_modal_button">SOL</h2>
-      <!--<embed id="music" src="./assets/music/Alien Soundtrack Track 2 'Hyper Sleep' Jerry Goldsmith.mp3" autostart="true" loop="true"
-        hidden="true">-->
-      <audio id="music" autoplay="true" loop="true">
-        <source src="assets/music/Alien Soundtrack Track 2 'Hyper Sleep' Jerry Goldsmith.mp3"> 
-      </audio>
-      <!--<i class="fas fa-volume-off"></i>-->
-      <img id="volume" src="./assets/icons/volume-up-solid.png" alt="Music">
-      <div class="nav_bar_planet_buttons">
-        <button>MERCURY</button>
-        <button>VENUS</button>
-        <button>EARTH</button>
-        <button>MARS</button>
-        <button>JUPITER</button>
-        <button>SATURN</button>
-        <button>URANUS</button>
-        <button>NEPTUNE</button>
-        <button>PLUTO</button>
-      </div>
-      <div class="nav_links">
-        <a href="https://github.com/keginzburg/sol"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/kyleginzburg/"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
-    <div class="sim_content">
-      <!--<div class="orbit_sim">-->
-        <canvas class="orbit_canvas"></canvas>
-      <!--</div>-->
-      <div class="middle_sims">
-        <div class="gravity_sim">
-          <div class="gravity_header">
+              <h3>hello. i am sol: your space freighter's onboard data visualization of our star system's nine planets. see below for pilot's manual:</h3>
+            </div>
+            <div class="pilot_manual">
+              <div class="diagram">
+                <div class="nav_diagram">
+                  <span>A</span>
+                </div>
+                <div class="main_diagram">
+                  <div class="orbit_diagram">
+                    <span>B</span>
+                  </div>
+                  <div class="middle_sims_diagram">
+                    <div class="gravity_diagram">
+                      <span>C</span>
+                    </div>
+                    <div class="temperature_diagram">
+                      <span>D</span>
+                    </div>
+                  </div>
+                  <div class="readout_diagram">
+                    <span>E</span>
+                  </div>
+                </div>
+              </div>
+              <div class="modal_legend">
+                <h3>A: navigation</h3>
+                <h3>B: lunar orbital sim</h3>
+                <h3>C: gravity sim</h3>
+                <h3>D: temperature map</h3>
+                <h3>E: data readout</h3>
+              </div>
+            </div>
+            <div class="modal_button_container">
+              <button class="close_modal_button">INITIATE</button>
+            </div>
           </div>
-          <canvas class="gravity_canvas"></canvas>
-        </div>
-        <div class="temperature_sim">
-          <canvas class="temperature_canvas"></canvas>
-        </div>
-      </div>
-      <div class="readout_data">
-        <h3>Name:</h3>
-        <div class="h4_container"><h4 class="planet_id">You</h4></div>
-        <h3>Anglo:</h3>
-        <div class="h4_container"><h4 class="planet_name">Found</h4></div>
-        <h3>Mass:</h3>
-        <div class="h4_container"><h4 class="planet_mass">An</h4></div>
-        <h3>Density:</h3>
-        <div class="h4_container"><h4 class="planet_density">Easter</h4></div>
-        <h3>Gravity:</h3>
-        <div class="h4_container"><h4 class="planet_gravity">Egg</h4></div>
-        <h3>Moons:</h3>
-        <div class="h4_container"><h4 class="planet_moons">Nice</h4></div>
-        <h3>Temperature:</h3>
-        <div class="h4_container"><h4 class="planet_temperature">Job</h4></div>
-        <div class="readout_chart">
-          <canvas id="myChart" width="250" height="250"></canvas>
+          <div class="main_content">
+            <div class="nav_bar">
+              <h2 class="open_modal_button">SOL</h2>
+                <audio id="music" autoplay="true" loop="true">
+                  <source src="assets/music/Alien Soundtrack Track 2 'Hyper Sleep' Jerry Goldsmith.mp3"> 
+                </audio>
+              <img id="volume" src="./assets/icons/volume-up-solid.png" alt="Music">
+              <div class="nav_bar_planet_buttons">
+                <button>MERCURY</button>
+                <button>VENUS</button>
+                <button>EARTH</button>
+                <button>MARS</button>
+                <button>JUPITER</button>
+                <button>SATURN</button>
+                <button>URANUS</button>
+                <button>NEPTUNE</button>
+                <button>PLUTO</button>
+              </div>
+              <div class="nav_links">
+                <a href="https://github.com/keginzburg/sol"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kyleginzburg/"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="sim_content">
+              <canvas class="orbit_canvas"></canvas>
+              <div class="middle_sims">
+                <div class="gravity_sim">
+                  <!--<div class="gravity_header"></div>-->
+                  <canvas class="gravity_canvas"></canvas>
+                </div>
+                <div class="temperature_sim">
+                  <canvas class="temperature_canvas"></canvas>
+                </div>
+              </div>
+              <div class="readout_data">
+                <h3>Name:</h3>
+                <div class="h4_container">
+                  <h4 class="planet_id">You</h4>
+                </div>
+                <h3>Anglo:</h3>
+                <div class="h4_container">
+                  <h4 class="planet_name">Found</h4>
+                </div>
+                <h3>Mass:</h3>
+                <div class="h4_container">
+                  <h4 class="planet_mass">An</h4>
+                </div>
+                <h3>Density:</h3>
+                <div class="h4_container">
+                  <h4 class="planet_density">Easter</h4>
+                </div>
+                <h3>Gravity:</h3>
+                <div class="h4_container">
+                  <h4 class="planet_gravity">Egg</h4>
+                </div>
+                <h3>Moons:</h3>
+                <div class="h4_container">
+                  <h4 class="planet_moons">Nice</h4>
+                </div>
+                <h3>Temperature:</h3>
+                <div class="h4_container">
+                  <h4 class="planet_temperature">Job</h4>
+                </div>
+                <div class="readout_chart">
+                  <canvas id="myChart" width="250" height="250"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
 </body>
 
 </html>

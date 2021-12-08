@@ -71,13 +71,55 @@ table {
   font-style: normal;
 }
 body {
-  position: relative;
   display: flex;
   justify-content: center;
   font-family: "pixel";
   text-shadow: 0 0 6px #13e24f;
   color: #13e24f;
   background-color: #141d21;
+}
+
+.computer_casing {
+  display: flex;
+  justify-content: center;
+  background-color: #d6bf91;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 1340px;
+  height: 800px;
+  z-index: 1;
+}
+
+.screen_casing {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  display: flex;
+  justify-content: center;
+  background-color: #696044;
+  background-image: linear-gradient(#696044, #fae2a9);
+  border: 1px solid #d6bf91;
+  width: 1170px;
+  height: 675px;
+  z-index: 2;
+}
+
+.screen {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: #141d21;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 30px black;
+  width: 1125px;
+  height: 625px;
+  z-index: 3;
+}
+
+.program_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 4;
 }
 
 .modal_container {
@@ -89,6 +131,7 @@ body {
   border: 2px solid #13e24f;
   padding: 15px 15px 15px 15px;
   box-shadow: 0 0 5px #13e24f;
+  z-index: 5;
 }
 
 .intro_modal h2 {
@@ -198,6 +241,7 @@ body {
   box-shadow: 0 0 5px #13e24f;
   height: 30px;
   margin: 0 10px 0;
+  z-index: 6;
 }
 .modal_button_container .close_modal_button:hover {
   box-shadow: 0 0 10px #13e24f;
@@ -240,7 +284,7 @@ h3 {
 
 .main_content {
   display: inline-block;
-  margin-top: 100px;
+  margin-top: 25px;
   z-index: 1;
 }
 
