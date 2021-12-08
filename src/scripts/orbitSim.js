@@ -1,7 +1,7 @@
 const Planet = require("./planet.js");
 const Moon = require("./moon.js");
 
-function simulateOrbit(data) {
+function simulateOrbit(data, moons) {
   let planetData;
   planetData = data;
   const orbitCanvas = document.querySelector(".orbit_canvas");
@@ -96,9 +96,8 @@ function simulateOrbit(data) {
   let planet;
   planet = new Planet(orbitCanvas.width / 2, orbitCanvas.height / 2, planetData.meanRadius * 0.001);
 
-  let moons;
-  function captureMoons(moonData) {
-    moons = [];
+  function captureMoons(moonData, moonArr) {
+    moonArr.length = 0;
 
     if (moonData != null)
       for (let i = 0; i < moonData.length; i++) {
@@ -111,15 +110,15 @@ function simulateOrbit(data) {
             let moonDistanceX = optimizeAxis(planetData.semimajorAxis);
             let moonDistanceY = semiMinorAxis(moonDistanceX, planetData.eccentricity);
             let moonSpeed = optimizeSpeed(planetData.sideralOrbit);
-            let name = planetData.englishName;
-            console.log(name);
+            let moonName = planetData.englishName;
+            //console.log(name);
 
             if (planetData.meanRadius > planetData.equaRadius) {
               let moonRadius = planetData.meanRadius;
-              moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random() * Math.PI * 2, moonDistanceX, moonDistanceY, moonSpeed));
+              moonArr.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random() * Math.PI * 2, moonDistanceX, moonDistanceY, moonSpeed, moonName));
             } else {
               let moonRadius = planetData.equaRadius;
-              moons.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random() * Math.PI * 2, moonDistanceX, moonDistanceY, moonSpeed));
+              moonArr.push(new Moon(orbitCanvas.width / 2, orbitCanvas.height / 2, Math.ceil(moonRadius * 0.001), Math.random() * Math.PI * 2, moonDistanceX, moonDistanceY, moonSpeed, moonName));
             }
           })
       }
@@ -176,22 +175,8 @@ function simulateOrbit(data) {
   //   })
   // }
 
-  captureMoons(planetData.moons);
+  captureMoons(planetData.moons, moons);
   animate();
-
-  // function getPlanetData(planetName = 'earth') {
-  //   fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planetName}`)
-  //     .then(response => {
-  //       return response.json();
-  //     })
-  //     .then(data => {
-  //       planet = new Planet(orbitCanvas.width / 2, orbitCanvas.height / 2, data.meanRadius * 0.001);
-  //       captureMoons(data.moons);
-  //       animate();
-  //     });
-  // }
-
-  //getPlanetData(planetName);
 }
 
 module.exports = simulateOrbit;

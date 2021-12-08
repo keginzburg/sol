@@ -60,11 +60,12 @@ Sol is a 2D data visualization of our solar system's nine planets and their resp
 * ~~Add 1G gravity lander for reference in gravity simulation.~~
 * ~~Add retro computer monitor background around main content.~~
 * ~~Add ability to pause and resume simulations.~~
+* ~~Add improved data identifiers for planets and respective bodies.~~
 * Add more detail to lunar lander in gravity simulation.
 * Add dynamic backgrounds for canvas.
-* Add improved data identifiers for planets and respective bodies.
 * Add interactive spaceship avatar that can "fly" through orbit simulation.
 * Add solar system modal.
+* Add "Houston, we have a problem!" error message.
 
 
 ## CC Licensing:
@@ -72,3 +73,5 @@ Sol is a 2D data visualization of our solar system's nine planets and their resp
 * Favicon [solar system](https://thenounproject.com/icon/solar-system-1245933/) by [Ralf Schmitzer](https://thenounproject.com/ralfschmitzer/).
 * [Volume](https://fontawesome.com/v5.15/icons/volume-up?style=solid) icons were provided by [Font Awesome](https://fontawesome.com/license) and only had colors changes.
 * Background wallpaper design from Stanley Kubrick's *The Shining*.
+* Music track *Hypersleep* from Jerry Goldsmith's 
+Original Motion Picture Soundtrack for *Alien*.

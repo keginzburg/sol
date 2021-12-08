@@ -32,6 +32,7 @@ body {
 }
 
 .computer_casing {
+  position: relative;
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -42,6 +43,14 @@ body {
   width: 1260px;
   height: 775px;
   z-index: 1;
+}
+
+#power_light {
+  position: absolute;
+  bottom: 20px;
+  right: 70px;
+  //filter: drop-shadow(0 0 0px #13e24f);
+  z-index: 6;
 }
 
 .screen_casing {
@@ -373,6 +382,7 @@ h3 {
   box-shadow: 0 0 5px #13e24f;
   width: 508px;
   height: 508px;
+  cursor: crosshair;
 }
 
   // .orbit_play {
@@ -420,6 +430,23 @@ h3 {
       font-size: 16px;
       filter: drop-shadow(0 0 1px #13e24f);
     }
+  }
+
+  .moon_info {
+    display: none;
+    position: absolute;
+    top: 94px;
+    left: 100px;
+    z-index: 7;
+    font-size: 16px;
+    font-family: 'halogen';
+    letter-spacing: 2px;
+    padding: 4px 6px 4px 7px;
+    color: rgba(19, 226, 79, 255);
+    background-color: rgba(20, 29, 33, 255);
+    border: 1px solid rgba(19, 226, 79, 255);
+    border-radius: 3px;
+    box-shadow: 0 0 2px #13e24f;
   }
 
 // .gravity_sim {

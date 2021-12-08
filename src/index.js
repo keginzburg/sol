@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ctx.shadowBlur = 4;
   ctx.shadowColor = "rgba(19, 226, 79, 255)";
 
+  let moons = [];
+
   const navBar = document.querySelector(".nav_bar_planet_buttons");
   navBar.addEventListener('click', function(event) {
 
@@ -64,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
           return response.json();
         })
         .then(data => {
-            simulateOrbit(data);
+            simulateOrbit(data, moons);
             simulateGravity(data);
             simulateTemp(data);
             renderChart(myChart, data);
@@ -102,17 +104,48 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   let pause = true;
+  const moonInfo = document.querySelector(".moon_info");
   const pauseButton = document.querySelector(".orbit_pause");
   pauseButton.addEventListener('click', function () {
     if (pause) {
       pauseButton.id = 'on';
       pause = false;
       pauseButton.innerHTML = '<i class="fas fa-play"></i>';
+      moonInfo.style.display = "inline-block";
     } else {
       pauseButton.id = 'off';
       pause = true;
       pauseButton.innerHTML = '<i class="fas fa-pause"></i>'
+      moonInfo.style.display = "none";
     }
+  })
+
+  function getMousePos(canvas, e) {
+    const square = canvas.getBoundingClientRect();
+    return {
+      x: e.clientX - square.left,
+      y: e.clientY - square.top
+    };
+  }
+
+  const orbitCanvas = document.querySelector(".orbit_canvas");
+  orbitCanvas.addEventListener('mousemove', (e) => {
+    let mouse = getMousePos(orbitCanvas, e);
+    moons.forEach(moon => {
+      let moonX = Math.floor(moon.x);
+      let moonY = Math.floor(moon.y);
+      if ((mouse.x-6 < moonX+5 && mouse.x-6 > moonX-5) && (mouse.y-4 < moonY+5 && mouse.y-4 > moonY-5)) {
+        moonInfo.innerText = `moon name: ${moon.name}`;
+
+      }
+    })
+      // if (e.x===moonX && e.y===moonY) {
+      //   console.log(true);
+      // }
+    //   // if (Math.floor(moon.distanceX) === (e.x-202) && Math.floor(moon.distanceY) === (e.y-23)) {
+    //   // }
+    // })
+    
   })
 
 })
