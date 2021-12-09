@@ -61,7 +61,7 @@
   }
 ```
 
-These canvas drawings were then animated using an animate method that recursively called itself. Initially, canvas animations were not visually accesible because the fetched data was not scaled for a 500px by 500px 2D canvas. For instance, for the larger planetary bodies, some moons are 8 figures of kilometers away, while others are 6 figures, and the planetary body itself is only 5 figures. In order to solve this, I ended up writing specific functions to translate that data to an appropriate scale.
+* These canvas drawings were then animated using an animate method that recursively called itself. Initially, canvas animations were not visually accesible because the fetched data was not scaled for a 500px by 500px 2D canvas. For instance, for the larger planetary bodies, some moons are 8 figures of kilometers away, while others are 6 figures, and the planetary body itself is only 5 figures. In order to solve this, I ended up writing specific functions to translate that data to an appropriate scale.
 
 ```js
   function optimizeAxis(semimajorAxis) {
@@ -93,6 +93,52 @@ These canvas drawings were then animated using an animate method that recursivel
       return Math.random() * 0.001 + 0.00003906;
     }
   }
+```
+
+* Additionally, it is possible to pause and resume the orbital simulations and read each lunar body's unique name when hovering over their position with your cursor. This involved DOM manipulation and matching the window mouseover position with that of the individual moon instance's stored position values.
+
+```js
+  let pause = true;
+  const moonInfo = document.querySelector(".moon_info");
+  const pauseButton = document.querySelector(".orbit_pause");
+  pauseButton.addEventListener('click', function () {
+    if (pause) {
+      pauseButton.id = 'on';
+      pause = false;
+      pauseButton.innerHTML = '<i class="fas fa-play"></i>';
+      moonInfo.style.display = "inline-block";
+    } else {
+      pauseButton.id = 'off';
+      pause = true;
+      pauseButton.innerHTML = '<i class="fas fa-pause"></i>'
+      moonInfo.style.display = "none";
+    }
+  })
+
+  function getMousePos(canvas, e) {
+    const square = canvas.getBoundingClientRect();
+    return {
+      x: e.clientX - square.left,
+      y: e.clientY - square.top
+    };
+  }
+
+  const orbitCanvas = document.querySelector(".orbit_canvas");
+  orbitCanvas.addEventListener('mousemove', (e) => {
+    let mouse = getMousePos(orbitCanvas, e);
+    moons.forEach(moon => {
+      let moonX = Math.floor(moon.x);
+      let moonY = Math.floor(moon.y);
+      if ((mouse.x-6 < moonX+10 && mouse.x-6 > moonX-10) && (mouse.y-4 < moonY+5 && mouse.y-4 > moonY-5)) {
+        if(moon.name === "") {
+          moonInfo.innerText = "moon id: unknown";
+        } else {
+          moonInfo.innerText = `moon id: ${moon.name.toLowerCase()}`;
+        }
+      }
+    })
+    
+  })
 ```
 
 ### Temperature:
