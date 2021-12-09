@@ -20,9 +20,12 @@
 * Choose between the nine, main planets of our solar system via the planet links in the nav bar. Upon doing so, Sol fetches said planet's data from an API and feeds that data into three distinct simulations: Orbit, Gravity, and Temperature.
 
 ### Orbit:
-![Jupiter Orbit Sim](./assets/readme/jupiter_orbit.gif)
+<p float="left">
 
+![Jupiter Orbit Sim](./assets/readme/jupiter_orbit.gif)
 ![Mars Orbit Sim](./assets/readme/mars_orbit.gif)
+
+</p>
 
 * Observe the orbital bodies of each respective planet and how they differ. Users can pause and resume orbit simulations and hover over lunar bodies to identify their unique names.
 
