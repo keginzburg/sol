@@ -150,7 +150,7 @@
 
 </p>
 
-* Observe a temperature visualization for each respective planet. Entropy body were built with entropy and particle classes. Upon fetching data for a specific planet, that planet's avgTemp was parsed and utilized. Initially, I thought to depict the temperature differences as colored particles that would bounce around the confines of their canvas. After some canvas research though, a "3D" rendering of each planet's heat map became possible. A mathematical functions were utilized in order to establish a frame of reference and dynamic x and z position changes along with particle size changes. This gave the illusion of 3D on the 2D canvas.
+* Observe a temperature visualization for each respective planet. Entropy body were built with entropy and particle classes. Upon fetching data for a specific planet, that planet's avgTemp was parsed and utilized. Initially, I thought to depict the temperature differences as colored particles that would bounce around the confines of their canvas. After some canvas research though, a "3D" rendering of each planet's heat map became possible. A mathematical function was utilized in order to establish a frame of reference and dynamic x and z position changes along with particle size changes. As the particles "rotate", their x position cycles between two x boundaries, dependent on their y position, and grow bigger and smaller dependent on their z position. This gave the illusion of 3D on the 2D canvas.
 
 ```js
   project(sin, cos) {
