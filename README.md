@@ -24,21 +24,28 @@
 
 ![Mars Orbit Sim](./assets/readme/mars_orbit.gif)
 
-* Observe the orbital bodies of each respective planet and how they differ.
-* Observe a temperature visualization for each respective planet.
-* Initiate a gravity simulation for each respective planet.
+* Observe the orbital bodies of each respective planet and how they differ. Users can pause and resume orbit simulations and hover over lunar bodies to identify their unique names.
 
-* ~~Add ability to pause and resume simulations.~~
-* ~~Add improved data identifiers for planets and respective bodies.~~
+### Temperature:
+![Venus Temp Sim](.assets/readme/venus_temp.gif)
+
+![Earth Temp Sim](.assets/readme/earth_temp.gif)
+
+![Pluto Temp Sim](.assets/readme/pluto_temp.gif)
+
+* Observe a temperature visualization for each respective planet.
+
+### Gravity:
+![Mercury Gravity Sim](.assets/readme/mercury_grav.gif)
+
+![Jupiter Gravity Sim](.assets/readme/jupiter_grav.gif)
+
+* Initiate a gravity simulation for each respective planet.
 
 ### In addition, this project includes:
 
 * An About modal describing the background and structure of the data visualization.
-* A production README.
-
-
-
-
+* This production README.
 
 ## Technologies, Libraries, APIs:
 
