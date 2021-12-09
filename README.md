@@ -27,18 +27,18 @@
 * Observe the orbital bodies of each respective planet and how they differ. Users can pause and resume orbit simulations and hover over lunar bodies to identify their unique names.
 
 ### Temperature:
-![Venus Temp Sim](.assets/readme/venus_temp.gif)
+![Venus Temp Sim](./assets/readme/venus_temp.gif)
 
-![Earth Temp Sim](.assets/readme/earth_temp.gif)
+![Earth Temp Sim](./assets/readme/earth_temp.gif)
 
-![Pluto Temp Sim](.assets/readme/pluto_temp.gif)
+![Pluto Temp Sim](./assets/readme/pluto_temp.gif)
 
 * Observe a temperature visualization for each respective planet.
 
 ### Gravity:
-![Mercury Gravity Sim](.assets/readme/mercury_grav.gif)
+![Mercury Gravity Sim](./assets/readme/mercury_grav.gif)
 
-![Jupiter Gravity Sim](.assets/readme/jupiter_grav.gif)
+![Jupiter Gravity Sim](./assets/readme/jupiter_grav.gif)
 
 * Initiate a gravity simulation for each respective planet.
 
