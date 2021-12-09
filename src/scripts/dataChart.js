@@ -1,4 +1,3 @@
-
 function renderChart(chart, fetchedData) {
   let myChart = chart;
   let moons;
@@ -33,4 +32,3 @@ function renderChart(chart, fetchedData) {
 }
 
 module.exports = renderChart;
-

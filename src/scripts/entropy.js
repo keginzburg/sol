@@ -2,21 +2,18 @@ const Particles = require("./particles.js");
 
 class Entropy {
   constructor(ctx, data) {
-    this.rotation = 0;
     this.particles = [];
     this.particlesAmount = 400;
     this.particleRadius = 2;
-    this.planetRadius = 100*0.7;
+    this.planetRadius = 70;
     this.planetCenterZ = (-this.planetRadius);
-    this.povCenterX = 250 / 2;
-    this.povCenterY = 250 / 2;
-    this.fov = 250 * 0.8;
+    this.povCenterX = 125;
+    this.povCenterY = 125;
+    this.fov = 200;
     this.rotation = 0;
     this.temperature = data.avgTemp;
-
-
     this.ctx3 = ctx;
-    this.render = this.render.bind(this);
+    this.animate = this.animate.bind(this);
   }
 
   tempColor(i) {
@@ -62,14 +59,7 @@ class Entropy {
     }
   }
 
-  // rgba(245,73,50,255) tomato
-  // rgba(231,38,43,255) crimson
-  // rgba(254,254,34,255) yellow
-  // rgba(140,254,156,255) palegreen
-  // rgba(74,217,254,255) turquoise
-
   createParticles() {
-
     this.particles.length = 0;
 
     for (let i=0; i<this.particlesAmount; i++) {
@@ -79,12 +69,12 @@ class Entropy {
       const x = this.planetRadius * Math.sin(phi) * Math.cos(theta);
       const y = this.planetRadius * Math.sin(phi) * Math.sin(theta);
       const z = (this.planetRadius * Math.cos(phi)) + this.planetCenterZ;
+
       this.particles.push(new Particles(x, y, z, this.ctx3, this.particleRadius, this.povCenterX, this.povCenterY, this.planetCenterZ, this.fov, this.tempColor(i)));
     }
   }
 
-
-  render() {
+  animate() {
     this.ctx3.clearRect(0, 0, 250, 250);
 
     this.rotation += 0.008;
@@ -97,23 +87,8 @@ class Entropy {
     }
 
     const that = this;
-
-    requestAnimationFrame(that.render);
-
-    // setTimeout(function() {
-    //   requestAnimationFrame(that.render);
-    // }, 1000/60);
+    requestAnimationFrame(that.animate);
   }
-
- 
-
-  // this.updateEntropy = (ctx) => {
-  //   this.drawEntropy(ctx);
-  // }
-
-  // this.drawEntropy = (ctx) => {
-
-  // }
 }
 
 module.exports = Entropy;

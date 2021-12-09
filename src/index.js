@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ctx.shadowBlur = 4;
   ctx.shadowColor = "rgba(19, 226, 79, 255)";
 
-  let moons = [];
+  let moons;
 
   const navBar = document.querySelector(".nav_bar_planet_buttons");
   navBar.addEventListener('click', function(event) {
@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     moonInfo.innerText = "moon id:";
 
     function getPlanetData(planetName = 'earth') {
+      moons = [];
       fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planetName}`)
         .then(response => {
           if (!response.ok) {
@@ -149,12 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     })
-      // if (e.x===moonX && e.y===moonY) {
-      //   console.log(true);
-      // }
-    //   // if (Math.floor(moon.distanceX) === (e.x-202) && Math.floor(moon.distanceY) === (e.y-23)) {
-    //   // }
-    // })
     
   })
 

@@ -30,7 +30,6 @@ function simulateGravity(data) {
       object = new FallingObject(data.gravity);
       ghost = new FallingObject(9.8)
       animate();
-    
   }
 
   createObject(data);

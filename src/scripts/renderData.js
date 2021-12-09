@@ -1,4 +1,3 @@
-
 function renderData(data) {
   const nameHeader = document.querySelector(".planet_id");
   const angloHeader = document.querySelector(".planet_name");
@@ -30,4 +29,3 @@ function renderData(data) {
 }
 
 module.exports = renderData;
-

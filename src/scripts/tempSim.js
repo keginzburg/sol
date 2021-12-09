@@ -7,23 +7,9 @@ function simulateTemp(data) {
 
   const ctx3 = tempCanvas.getContext('2d');
 
-  function space() {
-    const spaceColor = "rgba(20,29,33,255)";
-    ctx3.fillStyle = spaceColor;
-    ctx3.fillRect(0, 0, gravityCanvas.width, gravityCanvas.height);
-  }
-
-  // //function animate() {
-  //   requestAnimationFrame(animate);
-  //   ctx.clearRect(0, 0, tempCanvas.width, tempCanvas.height);
-  //   space();
-  // //}
-
   let entropy = new Entropy(ctx3, data);
   entropy.createParticles();
-  entropy.render();
-  //animate();
-
+  entropy.animate();
 }
 
 module.exports = simulateTemp;

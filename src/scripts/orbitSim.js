@@ -15,52 +15,6 @@ function simulateOrbit(data, moons) {
     const spaceColor = "rgba(20,29,33,255)";
     ctx.fillStyle = spaceColor;
     ctx.fillRect(0, 0, orbitCanvas.width, orbitCanvas.height);
-    //const retroGreen = "rgba(19,226,79,255)";
-    // ctx.strokeStyle = retroGreen;
-    // ctx.moveTo(30, 20);
-    // ctx.lineTo(30, 40);
-    // ctx.stroke();
-    // ctx.beginPath();
-    // ctx.strokeStyle = retroGreen;
-    // ctx.moveTo(20, 30);
-    // ctx.lineTo(40, 30);
-    // ctx.stroke();
-    // ctx.strokeStyle = retroGreen;
-    // ctx.moveTo(30, 460);
-    // ctx.lineTo(30, 480);
-    // ctx.stroke();
-    // ctx.beginPath();
-    // ctx.strokeStyle = retroGreen;
-    // ctx.moveTo(20, 470);
-    // ctx.lineTo(40, 470);
-    // ctx.stroke();
-    // ctx.strokeStyle = retroGreen;
-    // ctx.moveTo(460, 30);
-    // ctx.lineTo(480, 30);
-    // ctx.stroke();
-    // ctx.beginPath();
-    // ctx.strokeStyle = retroGreen;
-    // ctx.moveTo(470, 20);
-    // ctx.lineTo(470, 40);
-    // ctx.stroke();
-    // ctx.strokeStyle = retroGreen;
-    // ctx.moveTo(460, 30);
-    // ctx.lineTo(480, 30);
-    // ctx.stroke();
-    // ctx.beginPath();
-    // ctx.strokeStyle = retroGreen;
-    // ctx.moveTo(470, 20);
-    // ctx.lineTo(470, 40);
-    // ctx.stroke();
-    // ctx.strokeStyle = retroGreen;
-    // ctx.moveTo(460, 470);
-    // ctx.lineTo(480, 470);
-    // ctx.stroke();
-    // ctx.beginPath();
-    // ctx.strokeStyle = retroGreen;
-    // ctx.moveTo(470, 460);
-    // ctx.lineTo(470, 480);
-    // ctx.stroke();
   }
 
   function optimizeAxis(semimajorAxis) {
@@ -111,7 +65,6 @@ function simulateOrbit(data, moons) {
             let moonDistanceY = semiMinorAxis(moonDistanceX, planetData.eccentricity);
             let moonSpeed = optimizeSpeed(planetData.sideralOrbit);
             let moonName = planetData.id;
-            //console.log(name);
 
             if (planetData.meanRadius > planetData.equaRadius) {
               let moonRadius = planetData.meanRadius;
@@ -128,9 +81,6 @@ function simulateOrbit(data, moons) {
     const pauseButton = document.querySelector(".orbit_pause");
     if (pauseButton.id === "off") {
       requestAnimationFrame(animate);
-      // setTimeout(function() {
-      //   requestAnimationFrame(animate);
-      // }, 1000/60);
       ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
       space();
 
@@ -149,31 +99,6 @@ function simulateOrbit(data, moons) {
       })
     }
   }
-
-  //   requestAnimationFrame(animate);
-
-  //   // setTimeout(function() {
-  //   //   requestAnimationFrame(animate);
-  //   // }, 1000/60);
-  //   ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
-  //   space();
-
-  //   planet.updatePlanet(ctx);
-  //   moons.forEach(moon => {
-  //     moon.updateMoon(ctx2);
-  //   })
-  // }
-
-  // function pause() {
-  //   requestAnimationFrame(pause)
-  //   ctx.clearRect(0, 0, orbitCanvas.width, orbitCanvas.height);
-  //   space();
-
-  //   planet.updatePlanet(ctx);
-  //   moons.forEach(moon => {
-  //     moon.pauseMoon(ctx2);
-  //   })
-  // }
 
   captureMoons(planetData.moons, moons);
   animate();
