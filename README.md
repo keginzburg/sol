@@ -21,7 +21,7 @@ Sol is a 2D data visualization of our solar system's nine planets and their resp
 
 ## Wireframe:
 
-![Sol Wireframe](./wireframe.png)
+![Sol Wireframe](./assets/wireframe/wireframe.png)
 
 * Title will display "SOL" in an HTML heading with links to this project's Github repo and my LinkedIn.
 * Nav Bar will include clickable planet links that change the visualizations and data.

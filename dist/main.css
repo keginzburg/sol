@@ -54,19 +54,19 @@ table {
   \*************************************************************************************************************************************/
 @font-face {
   font-family: "borg";
-  src: url("../assets/Borg.ttf") format("truetype");
+  src: url("../assets/fonts/Borg.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "halogen";
-  src: url("../assets/HalogenRoughbyPixelSurplus-Regular.otf") format("opentype");
+  src: url("../assets/fonts/HalogenRoughbyPixelSurplus-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "pixel";
-  src: url("../assets/square_pixel-7.ttf") format("truetype");
+  src: url("../assets/fonts/square_pixel-7.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
