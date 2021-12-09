@@ -4,11 +4,26 @@
 
 ![Sol Interface](./assets/readme/main_interface.png)
 
+## Wireframe:
+
+![Sol Wireframe](./assets/wireframe/final_wireframe.png)
+
+* About Modal and Nav Bar display "SOL" in HTML headings with links to this project's Github repo and my LinkedIn.
+* Nav Bar includes clickable planet links that change the visualizations and fetch respective data.
+* Orbital, Gravity, and Temperature Visualizations provide dynamic canvas renders of the fetched data.
+* Abstract Data Readouts provides D3 and HTML renders of non-visual data.
+
 ## Functionality & MVPs:
 
 ### In Sol, users are able to:
 
-* Choose between the nine, main planets of our solar system.
+* Choose between the nine, main planets of our solar system via the planet links in the nav bar. Upon doing so, Sol fetches said planet's data from an API and feeds that data into three distinct simulations: Orbit, Gravity, and Temperature.
+
+### Orbit:
+![Jupiter Orbit Sim](./assets/readme/jupiter_orbit.gif)
+
+![Mars Orbit Sim](./assets/readme/mars_orbit.gif)
+
 * Observe the orbital bodies of each respective planet and how they differ.
 * Observe a temperature visualization for each respective planet.
 * Initiate a gravity simulation for each respective planet.
@@ -22,14 +37,7 @@
 * A production README.
 
 
-## Wireframe:
 
-![Sol Wireframe](./assets/wireframe/final_wireframe.png)
-
-* About Modal and Nav Bar display "SOL" in HTML headings with links to this project's Github repo and my LinkedIn.
-* Nav Bar includes clickable planet links that change the visualizations and fetch respective data.
-* Orbital, Gravity, and Temperature Visualizations provide dynamic canvas renders of the fetched data.
-* Abstract Data Readouts provides D3 and HTML renders of non-visual data.
 
 
 ## Technologies, Libraries, APIs:
