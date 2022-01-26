@@ -90,9 +90,18 @@ body {
   z-index: 4;
 }
 
+.modal_transparent {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 4;
+}
+
 .modal_container {
-  position: absolute;
-  top: 25%;
+  // position: absolute;
+  // top: 20%;
+  // left: 30%;
+  margin: 18vh auto;
   z-index: 2;
   width: 500px;
   background-color: rgba(20, 29, 33, 255);
@@ -223,6 +232,7 @@ body {
     height: 30px;
     margin: 0 10px 0;
     z-index: 6;
+    cursor: pointer;
   }
 
   .close_modal_button:hover {
@@ -276,7 +286,7 @@ h3 {
 
 .nav_bar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 1022px;
   height: 50px;
@@ -289,6 +299,10 @@ h3 {
     letter-spacing: 2px;
     padding-left: 8px;
     margin-bottom: -6px;
+  }
+
+  #volume {
+    margin: 0 5px 0;
   }
 
 }
@@ -319,7 +333,7 @@ h3 {
   border-radius: 3px;
   box-shadow: 0 0 5px #13e24f;
   height: 30px;
-  margin: 0 10px 0;
+  margin: 0 9px 0;
 }
 
 .nav_bar button:hover {
@@ -347,8 +361,8 @@ h3 {
 }
 
 
-.nav_links a:last-child {
-  margin-left: 15px;
+.nav_links a {
+  margin-left: 10px;
 }
 
 .sim_content {

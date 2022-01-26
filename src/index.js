@@ -87,13 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const modalCloseButton = document.querySelector(".close_modal_button");
   modalCloseButton.addEventListener('click', function () {
-    const modal = document.querySelector(".modal_container");
+    const modal = document.querySelector(".modal_transparent");
     modal.setAttribute("hidden", true);
   })
 
   const modalOpenButton = document.querySelector(".open_modal_button");
   modalOpenButton.addEventListener('click', function () {
-    const modal = document.querySelector(".modal_container");
+    const modal = document.querySelector(".modal_transparent");
     modal.removeAttribute("hidden");
   })
 

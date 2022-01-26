@@ -5,6 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="SOL" >
+  <meta property="og:image" content="./assets/main_interface.png">
+  <meta
+    property="og:description"
+    content="Sol is a 2D data visualization of our solar system using vanilla JavaScript, CSS, HTML5 Canvas, and DOM Manipulation."
+  >
+  <meta
+    property="og:url"
+    content="https://github.com/keginzburg/sol"
+  >
+
   <title>SOL</title>
   <link rel="shortcut icon" type="image/png" href="./assets/favicon2/favicon-32x32.png">
   <link rel="stylesheet" href="./dist/main.css" />
@@ -18,43 +30,46 @@
     <div class="screen_casing">
       <div class="screen">
         <div class="program_container">
-          <div class="modal_container">
-            <div class="intro_modal">
-              <h2>SOL</h2>
-              <h3>hello. i am sol: your space freighter's onboard data visualization of our star system's nine planets. see below for pilot's manual:</h3>
-            </div>
-            <div class="pilot_manual">
-              <div class="diagram">
-                <div class="nav_diagram">
-                  <span>A</span>
+          <div class="modal_transparent">
+            <div class="modal_container">
+              <div class="intro_modal">
+                <h2>SOL</h2>
+                <h3>hello. i am sol: your space freighter's onboard data visualization of our star system's nine planets. see below
+                  for pilot's manual:</h3>
+              </div>
+              <div class="pilot_manual">
+                <div class="diagram">
+                  <div class="nav_diagram">
+                    <span>A</span>
+                  </div>
+                  <div class="main_diagram">
+                    <div class="orbit_diagram">
+                      <span>B</span>
+                    </div>
+                    <div class="middle_sims_diagram">
+                      <div class="gravity_diagram">
+                        <span>C</span>
+                      </div>
+                      <div class="temperature_diagram">
+                        <span>D</span>
+                      </div>
+                    </div>
+                    <div class="readout_diagram">
+                      <span>E</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="main_diagram">
-                  <div class="orbit_diagram">
-                    <span>B</span>
-                  </div>
-                  <div class="middle_sims_diagram">
-                    <div class="gravity_diagram">
-                      <span>C</span>
-                    </div>
-                    <div class="temperature_diagram">
-                      <span>D</span>
-                    </div>
-                  </div>
-                  <div class="readout_diagram">
-                    <span>E</span>
-                  </div>
+                <div class="modal_legend">
+                  <h3>A: navigation</h3>
+                  <h3>B: lunar orbital sim</h3>
+                  <h3>C: gravity sim</h3>
+                  <h3>D: temperature map</h3>
+                  <h3>E: data readout</h3>
                 </div>
               </div>
-              <div class="modal_legend">
-                <h3>A: navigation</h3>
-                <h3>B: lunar orbital sim</h3>
-                <h3>C: gravity sim</h3>
-                <h3>D: temperature map</h3>
-                <h3>E: data readout</h3>
+              <div class="modal_button_container">
+                <button class="close_modal_button">INITIATE</button>
               </div>
-            </div>
-            <div class="modal_button_container">
-              <button class="close_modal_button">INITIATE</button>
             </div>
           </div>
           <div class="main_content">
@@ -78,6 +93,7 @@
               <div class="nav_links">
                 <a href="https://github.com/keginzburg/sol"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/kyleginzburg/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://angel.co/u/kyle-ginzburg"><i class="fab fa-angellist"></i></a>
               </div>
             </div>
             <div class="sim_content">
