@@ -90,9 +90,18 @@ body {
   z-index: 4;
 }
 
+.modal_transparent {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 4;
+}
+
 .modal_container {
-  position: absolute;
-  top: 25%;
+  // position: absolute;
+  // top: 20%;
+  // left: 30%;
+  margin: 18vh auto;
   z-index: 2;
   width: 500px;
   background-color: rgba(20, 29, 33, 255);
@@ -223,6 +232,7 @@ body {
     height: 30px;
     margin: 0 10px 0;
     z-index: 6;
+    cursor: pointer;
   }
 
   .close_modal_button:hover {
