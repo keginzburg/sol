@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   modalCloseButton.addEventListener('click', function () {
     const modal = document.querySelector(".modal_transparent");
     modal.setAttribute("hidden", true);
+    document.getElementById("music").play();
   })
 
   const modalOpenButton = document.querySelector(".open_modal_button");
