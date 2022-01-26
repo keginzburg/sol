@@ -140,17 +140,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const orbitCanvas = document.querySelector(".orbit_canvas");
   orbitCanvas.addEventListener('mousemove', (e) => {
     let mouse = getMousePos(orbitCanvas, e);
-    moons.forEach(moon => {
-      let moonX = Math.floor(moon.x);
-      let moonY = Math.floor(moon.y);
-      if ((mouse.x-6 < moonX+10 && mouse.x-6 > moonX-10) && (mouse.y-4 < moonY+5 && mouse.y-4 > moonY-5)) {
-        if(moon.name === "") {
-          moonInfo.innerText = "moon id: unknown";
-        } else {
-          moonInfo.innerText = `moon id: ${moon.name.toLowerCase()}`;
+    if (moons) {
+      moons.forEach(moon => {
+        let moonX = Math.floor(moon.x);
+        let moonY = Math.floor(moon.y);
+        if ((mouse.x - 6 < moonX + 10 && mouse.x - 6 > moonX - 10) && (mouse.y - 4 < moonY + 5 && mouse.y - 4 > moonY - 5)) {
+          if (moon.name === "") {
+            moonInfo.innerText = "moon id: unknown";
+          } else {
+            moonInfo.innerText = `moon id: ${moon.name.toLowerCase()}`;
+          }
         }
-      }
-    })
+      })
+    }
     
   })
 
