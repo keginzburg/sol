@@ -292,6 +292,7 @@
 
 * Favicon [solar system](https://thenounproject.com/icon/solar-system-1245933/) by [Ralf Schmitzer](https://thenounproject.com/ralfschmitzer/).
 * [Volume](https://fontawesome.com/v5.15/icons/volume-up?style=solid) icons were provided by [Font Awesome](https://fontawesome.com/license) and only had colors changes.
+* Personal link icons were provided by Font Awesome as well and only had colors changed.
 * Background wallpaper design from Stanley Kubrick's *The Shining*.
 * Music track *Hypersleep* from Jerry Goldsmith's 
 Original Motion Picture Soundtrack for *Alien*.
